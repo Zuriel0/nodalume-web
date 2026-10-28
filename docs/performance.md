@@ -1,5 +1,7 @@
 # Rendimiento preliminar
 
+Referencia histórica NDL-WEB-001. La comparación reproducida para la rama actual está en [NDL-WEB-002 performance](ndl-web-002-performance.md).
+
 Build local de NDL-WEB-001, 27 de octubre de 2026. Es la primera referencia de este micrositio; no hay un build anterior equivalente ni se compara con el portafolio o con el panel administrativo.
 
 ## Método

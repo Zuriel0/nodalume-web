@@ -1,5 +1,7 @@
 # Catálogo de movimiento
 
+La tabla inicial conserva la referencia NDL-WEB-001. Las diferencias de la rama actual se documentan al final, sin alterar el baseline publicado.
+
 | Escena                | Implementación                                                                                  | Propósito y límites                                                                                                                 |
 | --------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Entrada del Hero      | Timeline con etiqueta `open`, texto .9 s, stagger .12 s, composición 1.3 s; power3.out          | Opacidad mínima .78 en título, .9 en párrafo/CTA; desplazamientos 12–22 px. Contenido visible por defecto.                          |
@@ -25,3 +27,16 @@ Cada montaje crea un `gsap.context` acotado a la raíz. Al pausar, cambiar la pr
 La preferencia de movimiento reducido produce una composición estática completa y elimina smooth scroll y desplazamientos de iconos. La prueba de Lighthouse observó `reduced: true`, `triggers: 0`, control deshabilitado y ninguna petición del chunk de movimiento. Un servidor temporal devolvió 503 solo para ese chunk: la página quedó en `static-fallback`, con el CTA operativo.
 
 Se observaron valores cambiantes de la señal y de la matriz del cursor mediante acciones reales; salida de viewport con ambiental pausado; foco, Escape y details mediante teclado. No se grabó video. No se midieron FPS, ni se realizó una inspección a 10 % de velocidad. El cambio real de visibilidad de pestaña no pudo reproducirse de forma fiable con IAB: sus documentos permanecieron visibles al abrir otra pestaña; esa parte se revisó en código y queda pendiente de comprobación manual en un navegador convencional. No se afirma que esa prueba haya pasado.
+
+## NDL-WEB-002 — implementación de la rama de revisión
+
+- Entrada: mismas palabras en tres líneas; conexiones se dibujan durante 1.5s, sin ocultar texto imprescindible.
+- Ambiental: timeline de 8s; conjunto y 0→−8→0 unidades y giro 1.5°, trasera x8/y−16, frontal x−5/y12, con yoyo; señal se desvanece al final para reiniciar sin salto visible. Solo reproduce con la figura en viewport y el documento visible.
+- Cursor: quickTo reutilizables; x ±10px, y ±8px, giro ±1.5°, rotationX ±3°, rotationY ±4° y perspectiva 1100px. No hay engine 3D.
+- Seam: pliegue vectorial canvas/ink con scrub .5s, sin pinning. La narración tipográfica conserva opacidad mínima .78 y coordina el conector en la misma timeline de scroll.
+- Studio: una entrada finita de escala .96/y18 durante 1.2s; presets CSS de 850ms y visibilidad de conexiones de 350ms, siempre por acción del usuario. No hay loop en esta escena.
+- Iconos: menú y pausa usan el snippet gratuito 09-icon-swap de Transitions.dev. Se conserva learn-more-hover en enlaces, con foco y reduced motion.
+- Hay seis ScrollTriggers propios, frente a cuatro del baseline. Al pausar se eliminan; tres ciclos verificaron 6 → 0 → 6. Los cambios de idioma no recrean la capa ni reinician la selección del Studio.
+- Cleanup: contexto acotado, observers desconectados, frame de refresh cancelado y listeners retirados. La visibilidad utiliza la colección de triggers propios, incluyendo timelines. Se suspende el scrub al ocultar documento y se reanuda según el estado que correspondía.
+
+Lighthouse comprobó reduced motion con cero triggers, ninguna petición del chunk GSAP y transiciones de Studio a 0s. Un fallo real 503 del chunk dejó el Studio interactivo y completo. IAB no permite reproducir de forma fiable la transición real hidden/visible, ni inspeccionar a 10% de velocidad; esas comprobaciones manuales siguen pendientes. No se ha grabado video ni se afirma una tasa de FPS.

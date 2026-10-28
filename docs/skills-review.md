@@ -22,3 +22,9 @@ Revisión: 27 de octubre de 2026. Se consultaron las fuentes originales mediante
 React/React DOM 19.3.1, Vite 8.3.5, plugin React 6.1.2 y GSAP 3.15.0, con versiones fijadas y lockfile propio. Se revisaron los manifiestos antes de instalar desde npm. No se instala Motion, Three.js, Lenis ni una segunda biblioteca de animación. `@gsap/react` fue evaluado; se usa el patrón oficial alternativo `gsap.context()` + `revert()` desde un módulo diferido para mantener el motor completo fuera del entry.
 
 Lighthouse 13.6.0 y Prettier 3.9.10 se ejecutaron desde una instalación temporal de auditoría, fuera del paquete. No son dependencias de producción. Las fuentes son self-hosted y sus licencias OFL acompañan los archivos.
+
+## Aplicación en NDL-WEB-002
+
+Se reutilizaron las revisiones fijadas y sus licencias. Impeccable aportó la auditoría previa y craft floor, sin descargar su motor ni instalar hooks. La dirección Creative Systems ya estaba fijada; se refinó dentro de ella. GSAP Core/Timeline/ScrollTrigger/React/Performance guió las capas, quickTo, pausa y cleanup. Se añadió únicamente el snippet gratuito `09-icon-swap` de Transitions.dev para menú/pausa; su referencia y tokens se conservan en CSS, junto al snippet 24 existente. No se redistribuye una biblioteca de transiciones.
+
+Make Interfaces Feel Better se aplicó mediante revisión inline de cinco categorías, no como auditoría externa ni inspección a cámara lenta verificada. Sus límites se declaran en ndl-web-002-review.md. No se añadieron dependencias runtime. La Living Interface solo selecciona composiciones CSS: no permite crear/exportar animaciones GSAP ni integra ese runtime en el Portal Builder operativo. La licencia del runtime sigue siendo distinta de la licencia MIT de las skills.

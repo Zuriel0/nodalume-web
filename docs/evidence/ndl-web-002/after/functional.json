@@ -1,0 +1,53 @@
+[
+  {
+    "step": "focused-unlinked",
+    "caption": "En foco\nLas capas se acercan alrededor de un punto de encuentro.",
+    "composition": "focused",
+    "connections": "false",
+    "resetDisabled": false
+  },
+  {
+    "step": "translate-preserves-state",
+    "caption": "Focused\nThe layers come together around a shared point.",
+    "composition": "focused",
+    "connections": "false",
+    "focus": "English",
+    "hash": "#studio",
+    "lang": "en"
+  },
+  {
+    "step": "interactive-while-paused",
+    "composition": "linked",
+    "motion": {
+      "ambient": "paused",
+      "motion": "paused",
+      "triggers": "0"
+    },
+    "transition": "0s"
+  },
+  {
+    "step": "reset",
+    "composition": "open",
+    "connections": "true",
+    "motion": {
+      "ambient": "paused",
+      "motion": "active",
+      "triggers": "6"
+    },
+    "resetDisabled": true
+  },
+  {
+    "step": "keyboard-preset",
+    "composition": "focused",
+    "focus": "Focused",
+    "focusTop": 421.328125,
+    "headerBottom": 96,
+    "outline": "solid",
+    "outlineWidth": "3px"
+  },
+  {
+    "step": "keyboard-tab-space",
+    "composition": "linked",
+    "focus": "Linked"
+  }
+]

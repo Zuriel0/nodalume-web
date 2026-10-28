@@ -1,0 +1,422 @@
+[
+  {
+    "client": 305,
+    "duplicateIds": [],
+    "fonts": {
+      "dmSans": true,
+      "syne": true
+    },
+    "heroFont": "36.8px",
+    "lang": "es",
+    "motion": {
+      "ambient": "paused",
+      "motion": "active",
+      "triggers": "6"
+    },
+    "scrollWidth": 305,
+    "studioButtons": [
+      {
+        "height": 48,
+        "label": "Abierta",
+        "width": 85.65625
+      },
+      {
+        "height": 48,
+        "label": "En foco",
+        "width": 85.671875
+      },
+      {
+        "height": 48,
+        "label": "Enlazada",
+        "width": 85.671875
+      }
+    ],
+    "textOutsideViewport": [],
+    "viewport": 320
+  },
+  {
+    "client": 360,
+    "duplicateIds": [],
+    "fonts": {
+      "dmSans": true,
+      "syne": true
+    },
+    "heroFont": "41.25px",
+    "lang": "es",
+    "motion": {
+      "ambient": "paused",
+      "motion": "active",
+      "triggers": "6"
+    },
+    "scrollWidth": 360,
+    "studioButtons": [
+      {
+        "height": 48,
+        "label": "Abierta",
+        "width": 104
+      },
+      {
+        "height": 48,
+        "label": "En foco",
+        "width": 104
+      },
+      {
+        "height": 48,
+        "label": "Enlazada",
+        "width": 104
+      }
+    ],
+    "textOutsideViewport": [],
+    "viewport": 375
+  },
+  {
+    "client": 753,
+    "duplicateIds": [],
+    "fonts": {
+      "dmSans": true,
+      "syne": true
+    },
+    "heroFont": "66.048px",
+    "lang": "es",
+    "motion": {
+      "ambient": "paused",
+      "motion": "active",
+      "triggers": "6"
+    },
+    "scrollWidth": 753,
+    "studioButtons": [
+      {
+        "height": 58,
+        "label": "Abierta",
+        "width": 224.15625
+      },
+      {
+        "height": 58,
+        "label": "En foco",
+        "width": 224.171875
+      },
+      {
+        "height": 58,
+        "label": "Enlazada",
+        "width": 224.171875
+      }
+    ],
+    "textOutsideViewport": [],
+    "viewport": 768
+  },
+  {
+    "client": 1009,
+    "duplicateIds": [],
+    "fonts": {
+      "dmSans": true,
+      "syne": true
+    },
+    "heroFont": "72.704px",
+    "lang": "es",
+    "motion": {
+      "ambient": "paused",
+      "motion": "active",
+      "triggers": "6"
+    },
+    "scrollWidth": 1009,
+    "studioButtons": [
+      {
+        "height": 58,
+        "label": "Abierta",
+        "width": 220
+      },
+      {
+        "height": 58,
+        "label": "En foco",
+        "width": 220
+      },
+      {
+        "height": 58,
+        "label": "Enlazada",
+        "width": 220
+      }
+    ],
+    "textOutsideViewport": [],
+    "viewport": 1024
+  },
+  {
+    "client": 1425,
+    "duplicateIds": [],
+    "fonts": {
+      "dmSans": true,
+      "syne": true
+    },
+    "heroFont": "102.24px",
+    "lang": "es",
+    "motion": {
+      "ambient": "paused",
+      "motion": "active",
+      "triggers": "6"
+    },
+    "scrollWidth": 1425,
+    "studioButtons": [
+      {
+        "height": 58,
+        "label": "Abierta",
+        "width": 260
+      },
+      {
+        "height": 58,
+        "label": "En foco",
+        "width": 260
+      },
+      {
+        "height": 58,
+        "label": "Enlazada",
+        "width": 260
+      }
+    ],
+    "textOutsideViewport": [],
+    "viewport": 1440
+  },
+  {
+    "client": 1905,
+    "duplicateIds": [],
+    "fonts": {
+      "dmSans": true,
+      "syne": true
+    },
+    "heroFont": "128px",
+    "lang": "es",
+    "motion": {
+      "ambient": "paused",
+      "motion": "active",
+      "triggers": "6"
+    },
+    "scrollWidth": 1905,
+    "studioButtons": [
+      {
+        "height": 58,
+        "label": "Abierta",
+        "width": 260
+      },
+      {
+        "height": 58,
+        "label": "En foco",
+        "width": 260
+      },
+      {
+        "height": 58,
+        "label": "Enlazada",
+        "width": 260
+      }
+    ],
+    "textOutsideViewport": [],
+    "viewport": 1920
+  },
+  {
+    "client": 305,
+    "duplicateIds": [],
+    "fonts": {
+      "dmSans": true,
+      "syne": true
+    },
+    "heroFont": "36.8px",
+    "lang": "en",
+    "motion": {
+      "ambient": "paused",
+      "motion": "active",
+      "triggers": "6"
+    },
+    "scrollWidth": 305,
+    "studioButtons": [
+      {
+        "height": 48,
+        "label": "Open",
+        "width": 85.65625
+      },
+      {
+        "height": 48,
+        "label": "Focused",
+        "width": 85.671875
+      },
+      {
+        "height": 48,
+        "label": "Linked",
+        "width": 85.671875
+      }
+    ],
+    "textOutsideViewport": [],
+    "viewport": 320
+  },
+  {
+    "client": 360,
+    "duplicateIds": [],
+    "fonts": {
+      "dmSans": true,
+      "syne": true
+    },
+    "heroFont": "41.25px",
+    "lang": "en",
+    "motion": {
+      "ambient": "paused",
+      "motion": "active",
+      "triggers": "6"
+    },
+    "scrollWidth": 360,
+    "studioButtons": [
+      {
+        "height": 48,
+        "label": "Open",
+        "width": 104
+      },
+      {
+        "height": 48,
+        "label": "Focused",
+        "width": 104
+      },
+      {
+        "height": 48,
+        "label": "Linked",
+        "width": 104
+      }
+    ],
+    "textOutsideViewport": [],
+    "viewport": 375
+  },
+  {
+    "client": 753,
+    "duplicateIds": [],
+    "fonts": {
+      "dmSans": true,
+      "syne": true
+    },
+    "heroFont": "66.048px",
+    "lang": "en",
+    "motion": {
+      "ambient": "paused",
+      "motion": "active",
+      "triggers": "6"
+    },
+    "scrollWidth": 753,
+    "studioButtons": [
+      {
+        "height": 58,
+        "label": "Open",
+        "width": 224.15625
+      },
+      {
+        "height": 58,
+        "label": "Focused",
+        "width": 224.171875
+      },
+      {
+        "height": 58,
+        "label": "Linked",
+        "width": 224.171875
+      }
+    ],
+    "textOutsideViewport": [],
+    "viewport": 768
+  },
+  {
+    "client": 1009,
+    "duplicateIds": [],
+    "fonts": {
+      "dmSans": true,
+      "syne": true
+    },
+    "heroFont": "67.584px",
+    "lang": "en",
+    "motion": {
+      "ambient": "paused",
+      "motion": "active",
+      "triggers": "6"
+    },
+    "scrollWidth": 1009,
+    "studioButtons": [
+      {
+        "height": 58,
+        "label": "Open",
+        "width": 220
+      },
+      {
+        "height": 58,
+        "label": "Focused",
+        "width": 220
+      },
+      {
+        "height": 58,
+        "label": "Linked",
+        "width": 220
+      }
+    ],
+    "textOutsideViewport": [],
+    "viewport": 1024
+  },
+  {
+    "client": 1425,
+    "duplicateIds": [],
+    "fonts": {
+      "dmSans": true,
+      "syne": true
+    },
+    "heroFont": "95.04px",
+    "lang": "en",
+    "motion": {
+      "ambient": "paused",
+      "motion": "active",
+      "triggers": "6"
+    },
+    "scrollWidth": 1425,
+    "studioButtons": [
+      {
+        "height": 58,
+        "label": "Open",
+        "width": 260
+      },
+      {
+        "height": 58,
+        "label": "Focused",
+        "width": 260
+      },
+      {
+        "height": 58,
+        "label": "Linked",
+        "width": 260
+      }
+    ],
+    "textOutsideViewport": [],
+    "viewport": 1440
+  },
+  {
+    "client": 1905,
+    "duplicateIds": [],
+    "fonts": {
+      "dmSans": true,
+      "syne": true
+    },
+    "heroFont": "118.4px",
+    "lang": "en",
+    "motion": {
+      "ambient": "paused",
+      "motion": "active",
+      "triggers": "6"
+    },
+    "scrollWidth": 1905,
+    "studioButtons": [
+      {
+        "height": 58,
+        "label": "Open",
+        "width": 260
+      },
+      {
+        "height": 58,
+        "label": "Focused",
+        "width": 260
+      },
+      {
+        "height": 58,
+        "label": "Linked",
+        "width": 260
+      }
+    ],
+    "textOutsideViewport": [],
+    "viewport": 1920
+  }
+]
