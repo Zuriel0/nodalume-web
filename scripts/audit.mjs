@@ -16,9 +16,12 @@ const { default: BaseGatherer } = await load(
 );
 const { Audit } = await load("lighthouse/core/audits/audit.js");
 import { writeFile, mkdir } from "node:fs/promises";
-const output = fileURLToPath(
-  new URL("../docs/evidence/lighthouse/", import.meta.url),
-);
+const output =
+  process.env.NDL_AUDIT_OUTPUT ||
+  fileURLToPath(
+    new URL("../docs/evidence/ndl-web-002/lighthouse/", import.meta.url),
+  );
+const targetUrl = process.env.NDL_AUDIT_URL || "http://127.0.0.1:4186/";
 await mkdir(output, { recursive: true });
 class SiteState extends BaseGatherer {
   meta = { supportedModes: ["navigation"] };
@@ -29,7 +32,15 @@ class SiteState extends BaseGatherer {
         motion: document.querySelector(".site")?.dataset.motion,
         triggers: document.querySelector(".site")?.dataset.triggers,
         ambient: document.querySelector(".site")?.dataset.ambient,
-        heading: document.querySelector("h1")?.textContent,
+        heading:
+          document.querySelector("h1")?.getAttribute("aria-label") ||
+          document.querySelector("h1")?.textContent,
+        studioPreset:
+          document.querySelector(".studio-canvas")?.dataset.composition || null,
+        studioTransition: document.querySelector(".studio-shape")
+          ? getComputedStyle(document.querySelector(".studio-shape"))
+              .transitionDuration
+          : null,
         motionDisabled: document.querySelector(".motion-control")?.disabled,
         overflow:
           document.documentElement.scrollWidth >
@@ -91,7 +102,7 @@ for (const profile of ["mobile", "desktop"]) {
     });
     try {
       const result = await lighthouse(
-        "http://127.0.0.1:4186/",
+        targetUrl,
         {
           port: chrome.port,
           logLevel: "error",
@@ -135,7 +146,7 @@ const chrome = await chromeLauncher.launch({
 });
 try {
   const result = await lighthouse(
-    "http://127.0.0.1:4186/",
+    targetUrl,
     {
       port: chrome.port,
       logLevel: "error",

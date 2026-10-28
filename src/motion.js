@@ -5,9 +5,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function mountMotion(root) {
   const hero = root.querySelector(".hero");
+  const visual = root.querySelector(".hero-figure");
   const pointer = root.querySelector(".composition-pointer");
   const paths = root.querySelector(".connection");
   const signal = root.querySelector(".signal");
+  const length = paths.getTotalLength();
   const finePointer = matchMedia("(hover: hover) and (pointer: fine)");
   const disposers = [];
   let visible = false;
@@ -21,6 +23,10 @@ export function mountMotion(root) {
 
   // Scoped context is used instead of a React hook so the entire engine stays lazy-loaded.
   const context = gsap.context(() => {
+    gsap.set(pointer, {
+      transformPerspective: 1100,
+      transformOrigin: "50% 50%",
+    });
     intro = gsap
       .timeline({ defaults: { duration: 0.9, ease: "power3.out" } })
       .addLabel("open")
@@ -34,16 +40,24 @@ export function mountMotion(root) {
         ".composition-intro",
         { rotation: -6, scale: 0.93, duration: 1.3 },
         "open",
+      )
+      .from(
+        paths,
+        {
+          strokeDasharray: length,
+          strokeDashoffset: length,
+          duration: 1.5,
+          ease: "power2.inOut",
+        },
+        "open+=.2",
       );
-
-    const length = paths.getTotalLength();
     const position = { progress: 0 };
     ambient = gsap
       .timeline({ repeat: -1, paused: true })
       .to(
         ".planes",
         {
-          y: -13,
+          y: -8,
           rotation: 1.5,
           svgOrigin: "325 325",
           duration: 4,
@@ -67,6 +81,34 @@ export function mountMotion(root) {
         },
         0,
       );
+
+    ambient
+      .to(
+        ".plane-float-back",
+        {
+          x: 8,
+          y: -16,
+          duration: 4,
+          ease: "sine.inOut",
+          repeat: 1,
+          yoyo: true,
+        },
+        0,
+      )
+      .to(
+        ".plane-float-front",
+        {
+          x: -5,
+          y: 12,
+          duration: 4,
+          ease: "sine.inOut",
+          repeat: 1,
+          yoyo: true,
+        },
+        0,
+      )
+      .fromTo(signal, { opacity: 0 }, { opacity: 1, duration: 0.35 }, 0)
+      .to(signal, { opacity: 0, duration: 0.35 }, 7.65);
 
     gsap.to(".composition-pointer", {
       /* scroll and pointer never share a target transform */
@@ -93,16 +135,50 @@ export function mountMotion(root) {
         onEnter: () => intro.progress(1),
       },
     });
-    gsap.from(".story-line", {
-      x: 16,
-      opacity: 0.72,
-      stagger: 0.12,
+    gsap.to(".scene-seam", {
+      yPercent: -100,
       ease: "none",
+      scrollTrigger: {
+        trigger: ".philosophy",
+        start: "top 92%",
+        end: "top 55%",
+        scrub: 0.5,
+      },
+    });
+    const story = gsap.timeline({
       scrollTrigger: {
         trigger: ".philosophy",
         start: "top 85%",
         end: "top 20%",
         scrub: 0.6,
+      },
+    });
+    const connector = root.querySelector(".story-connector path");
+    const connectorLength = connector.getTotalLength();
+    story
+      .from(
+        ".story-line",
+        { x: 16, opacity: 0.78, stagger: 0.12, ease: "none" },
+        0,
+      )
+      .from(
+        connector,
+        {
+          strokeDasharray: connectorLength,
+          strokeDashoffset: connectorLength,
+          ease: "none",
+        },
+        0,
+      );
+    gsap.from(".studio-art", {
+      y: 18,
+      scale: 0.96,
+      duration: 1.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".studio-workbench",
+        start: "top 85%",
+        toggleActions: "play pause resume pause",
       },
     });
     gsap.from(".film-fold", {
@@ -124,6 +200,14 @@ export function mountMotion(root) {
       duration: 1.1,
       ease: "power3.out",
     });
+    const tiltX = gsap.quickTo(pointer, "rotationX", {
+      duration: 1.1,
+      ease: "power3.out",
+    });
+    const tiltY = gsap.quickTo(pointer, "rotationY", {
+      duration: 1.1,
+      ease: "power3.out",
+    });
     const enter = () => {
       bounds = hero.getBoundingClientRect();
     };
@@ -140,36 +224,50 @@ export function mountMotion(root) {
       x(dx * 20);
       y(dy * 16);
       rotation(dx * 3);
+      tiltX(-dy * 6);
+      tiltY(dx * 8);
     };
     const leave = () => {
       x(0);
       y(0);
       rotation(0);
+      tiltX(0);
+      tiltY(0);
     };
+    const pointerChanged = () => {
+      if (!finePointer.matches) leave();
+    };
+    finePointer.addEventListener("change", pointerChanged);
     hero.addEventListener("pointerenter", enter);
     hero.addEventListener("pointermove", move);
     hero.addEventListener("pointerleave", leave);
     disposers.push(() => {
+      finePointer.removeEventListener("change", pointerChanged);
       hero.removeEventListener("pointerenter", enter);
       hero.removeEventListener("pointermove", move);
       hero.removeEventListener("pointerleave", leave);
     });
   }, root);
 
+  const ownedTriggers = ScrollTrigger.getAll().filter((trigger) =>
+    root.contains(trigger.trigger),
+  );
   const sync = () => {
     if (document.hidden && !hidden) {
       interrupted = context
         .getTweens()
         .filter((tween) => tween.isActive() && !tween.paused());
       interrupted.forEach((tween) => tween.pause());
-      context
-        .getTweens()
-        .forEach((tween) => tween.scrollTrigger?.disable(false, true));
+      ownedTriggers.forEach((trigger) => {
+        trigger.getTween()?.pause();
+        trigger.disable(false, false);
+      });
       intro.pause();
     } else if (!document.hidden && hidden) {
-      context
-        .getTweens()
-        .forEach((tween) => tween.scrollTrigger?.enable(false, false));
+      ownedTriggers.forEach((trigger) => {
+        trigger.enable(false, false);
+        trigger.getTween()?.resume();
+      });
       interrupted.forEach((tween) => tween.resume());
       interrupted = [];
     }
@@ -185,7 +283,7 @@ export function mountMotion(root) {
     if (!visible && intro.progress() < 1) intro.progress(1);
     sync();
   });
-  observer.observe(hero);
+  observer.observe(visual);
   document.addEventListener("visibilitychange", sync);
   // Text is never split into injected spans. Resize handles locale and details changes.
   const resize = new ResizeObserver(() => {

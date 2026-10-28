@@ -3,11 +3,11 @@ export const copy = {
     language: "Idioma",
     menu: "Menú",
     close: "Cerrar menú",
-    nav: ["La idea", "El producto", "El horizonte"],
+    nav: ["La idea", "Explorar", "El producto", "El horizonte"],
     skip: "Saltar al contenido",
-    discover: "Explorar Nodalume",
+    discover: "Explorar la idea",
     see: "Conocer el enfoque",
-    headline: ["Tu portal.", "A tu manera."],
+    headline: ["Tu portal.", "A tu", "manera."],
     intro:
       "Un espacio para dar forma a portales cautivos con identidad propia. Diseño visual, personalización y experiencias conectadas.",
     concept: "Una composición de posibilidades.",
@@ -22,6 +22,35 @@ export const copy = {
     philosophyBody:
       "El acceso a una red suele empezar en una pantalla que todas las marcas comparten. Nodalume explora otra posibilidad: dar espacio a la identidad de cada proyecto y conectar su diseño con una experiencia pensada de principio a fin.",
     principle: "Componer. Conectar. Hacerlo propio.",
+    studio: {
+      title: "Una idea. Más de una forma.",
+      intro:
+        "Prueba otra composición. Acerca las capas, abre el espacio o sigue sus conexiones. La misma idea puede encontrar una expresión diferente.",
+      composition: "Elige una composición",
+      connections: "Mostrar conexiones",
+      reset: "Restablecer composición",
+      disclaimer:
+        "Experimento interactivo del micrositio. Es una exploración conceptual de Creative Systems, no una vista del Portal Builder.",
+      options: [
+        {
+          id: "open",
+          label: "Abierta",
+          description: "Espacio para que cada capa encuentre su lugar.",
+        },
+        {
+          id: "focused",
+          label: "En foco",
+          description:
+            "Las capas se acercan alrededor de un punto de encuentro.",
+        },
+        {
+          id: "linked",
+          label: "Enlazada",
+          description: "Una composición que avanza de un plano al siguiente.",
+        },
+      ],
+    },
+    engineering: "Ver el caso de ingeniería en ANXZU",
     productTitle: "Del lienzo a la experiencia.",
     productBody:
       "El Portal Builder reúne un editor visual, propiedades de elementos, vistas de escritorio y móvil, y un espacio de lógica. Este es el punto de partida que estamos desarrollando.",
@@ -82,11 +111,11 @@ export const copy = {
     language: "Language",
     menu: "Menu",
     close: "Close menu",
-    nav: ["The idea", "The product", "The horizon"],
+    nav: ["The idea", "Explore", "The product", "The horizon"],
     skip: "Skip to content",
-    discover: "Explore Nodalume",
+    discover: "Explore the idea",
     see: "Discover the approach",
-    headline: ["Your portal.", "Your way."],
+    headline: ["Your", "portal.", "Your way."],
     intro:
       "A space to shape captive portals with an identity of their own. Visual design, customization and connected experiences.",
     concept: "A composition of possibilities.",
@@ -101,6 +130,34 @@ export const copy = {
     philosophyBody:
       "Access to a network often starts with a screen that every brand shares. Nodalume explores another possibility: making room for each project’s identity and connecting its design with a considered end-to-end experience.",
     principle: "Compose. Connect. Make it yours.",
+    studio: {
+      title: "One idea. More than one way.",
+      intro:
+        "Try another composition. Bring the layers closer, open up the space or follow their connections. The same idea can find a different expression.",
+      composition: "Choose a composition",
+      connections: "Show connections",
+      reset: "Reset composition",
+      disclaimer:
+        "An interactive microsite experiment. A conceptual exploration of Creative Systems, not a Portal Builder view.",
+      options: [
+        {
+          id: "open",
+          label: "Open",
+          description: "Space for every layer to find its place.",
+        },
+        {
+          id: "focused",
+          label: "Focused",
+          description: "The layers come together around a shared point.",
+        },
+        {
+          id: "linked",
+          label: "Linked",
+          description: "A composition that moves from one plane to the next.",
+        },
+      ],
+    },
+    engineering: "Explore the engineering case on ANXZU",
     productTitle: "From canvas to experience.",
     productBody:
       "The Portal Builder brings together a visual editor, element properties, desktop and mobile views, and a logic workspace. This is the starting point we’re developing.",

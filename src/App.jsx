@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { copy, initialLanguage } from "./content.js";
+import LivingInterface from "./components/LivingInterface.jsx";
 
 function Arrow({ down = false }) {
   return (
@@ -58,13 +59,15 @@ function Composition() {
               />
             </g>
             <g className="planes">
-              <path
-                className="plane-back"
-                d="M186 146 400 106 534 307 320 347Z"
-                fill="var(--surface)"
-                stroke="var(--ink)"
-                strokeWidth="1.5"
-              />
+              <g className="plane-float-back">
+                <path
+                  className="plane-back"
+                  d="M186 146 400 106 534 307 320 347Z"
+                  fill="var(--surface)"
+                  stroke="var(--ink)"
+                  strokeWidth="1.5"
+                />
+              </g>
               <path
                 className="plane-main"
                 d="m153 245 214-40 134 201-214 40Z"
@@ -79,32 +82,34 @@ function Composition() {
                 strokeDasharray="4 6"
                 opacity=".3"
               />
-              <path
-                className="plane-front"
-                d="m119 342 214-40 134 201-214 40Z"
-                fill="var(--canvas)"
-                stroke="var(--ink)"
-                strokeWidth="1.5"
-              />
-              <path
-                d="m163 373 153-28m-132 59 154-29m-133 59 154-28"
-                stroke="var(--ink)"
-                strokeWidth="1"
-                opacity=".18"
-              />
-              <circle
-                cx="333"
-                cy="302"
-                r="12"
-                fill="var(--signal)"
-                stroke="var(--ink)"
-                strokeWidth="1.5"
-              />
-              <path
-                d="m328 302 3 3 6-7"
-                stroke="var(--ink)"
-                strokeWidth="1.5"
-              />
+              <g className="plane-float-front">
+                <path
+                  className="plane-front"
+                  d="m119 342 214-40 134 201-214 40Z"
+                  fill="var(--canvas)"
+                  stroke="var(--ink)"
+                  strokeWidth="1.5"
+                />
+                <path
+                  d="m163 373 153-28m-132 59 154-29m-133 59 154-28"
+                  stroke="var(--ink)"
+                  strokeWidth="1"
+                  opacity=".18"
+                />
+                <circle
+                  cx="333"
+                  cy="302"
+                  r="12"
+                  fill="var(--signal)"
+                  stroke="var(--ink)"
+                  strokeWidth="1.5"
+                />
+                <path
+                  d="m328 302 3 3 6-7"
+                  stroke="var(--ink)"
+                  strokeWidth="1.5"
+                />
+              </g>
             </g>
             <path
               d="M52 585h24m-12-12v24M556 90h24m-12-12v24"
@@ -190,7 +195,7 @@ export default function App() {
     () => matchMedia("(prefers-reduced-motion: reduce)").matches,
   );
   const t = copy[lang];
-  const targets = ["idea", "product", "horizon"];
+  const targets = ["idea", "studio", "product", "horizon"];
 
   useEffect(() => {
     document.documentElement.lang = lang;
@@ -300,20 +305,31 @@ export default function App() {
             aria-label={menu ? t.close : t.menu}
             onClick={() => setMenu(!menu)}
           >
-            <span>{menu ? t.close : t.menu}</span>
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
+            <span className="menu-label">{menu ? t.close : t.menu}</span>
+            <span
+              className="t-icon-swap"
+              data-state={menu ? "b" : "a"}
               aria-hidden="true"
             >
-              <path
-                d={menu ? "m5 5 10 10M15 5 5 15" : "M2 6h16M2 14h16"}
-                stroke="currentColor"
-                strokeWidth="1.5"
-              />
-            </svg>
+              <span className="t-icon" data-icon="a">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M2 6h16M2 14h16"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  />
+                </svg>
+              </span>
+              <span className="t-icon" data-icon="b">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="m5 5 10 10M15 5 5 15"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  />
+                </svg>
+              </span>
+            </span>
           </button>
         </div>
         <nav
@@ -340,7 +356,7 @@ export default function App() {
       <main id="main" tabIndex="-1">
         <section className="hero shell" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <h1 id="hero-title">
+            <h1 id="hero-title" aria-label={t.headline.join(" ")}>
               {t.headline.map((line) => (
                 <span className="hero-line" key={line}>
                   {line}
@@ -348,8 +364,12 @@ export default function App() {
               ))}
             </h1>
             <p className="hero-intro">{t.intro}</p>
-            <a className="button button-primary t-learn" href="#product">
+            <a className="button button-primary t-learn" href="#studio">
               {t.discover}
+              <Arrow />
+            </a>
+            <a className="hero-secondary t-learn" href="#idea">
+              {t.see}
               <Arrow />
             </a>
           </div>
@@ -371,23 +391,26 @@ export default function App() {
               disabled={reduced}
               onClick={() => setPaused(!paused)}
             >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
+              <span
+                className="t-icon-swap"
+                data-state={paused || reduced ? "b" : "a"}
                 aria-hidden="true"
               >
-                {paused || reduced ? (
-                  <path d="m5 3 7 5-7 5Z" fill="currentColor" />
-                ) : (
-                  <path
-                    d="M5 3v10M11 3v10"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  />
-                )}
-              </svg>
+                <span className="t-icon" data-icon="a">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M5 3v10M11 3v10"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    />
+                  </svg>
+                </span>
+                <span className="t-icon" data-icon="b">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="m5 3 7 5-7 5Z" fill="currentColor" />
+                  </svg>
+                </span>
+              </span>
               {reduced ? t.reduced : paused ? t.resume : t.pause}
             </button>
           </div>
@@ -398,8 +421,18 @@ export default function App() {
           tabIndex="-1"
           aria-labelledby="idea-title"
         >
+          <svg
+            className="scene-seam"
+            viewBox="0 0 1440 72"
+            preserveAspectRatio="none"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path d="M0 0h1440l-184 0-64 64H0Z" fill="var(--canvas)" />
+            <path d="m1256 0-64 64" stroke="var(--electric)" strokeWidth="2" />
+          </svg>
           <div className="shell">
-            <h2 id="idea-title">
+            <h2 id="idea-title" aria-label={t.philosophy.join(" ")}>
               {t.philosophy.map((line) => (
                 <span className="story-line" key={line}>
                   {line}
@@ -425,6 +458,7 @@ export default function App() {
             <p className="principle">{t.principle}</p>
           </div>
         </section>
+        <LivingInterface texts={t.studio} />
         <section
           className="product shell"
           id="product"
@@ -433,7 +467,16 @@ export default function App() {
         >
           <div className="section-heading">
             <h2 id="product-title">{t.productTitle}</h2>
-            <p>{t.productBody}</p>
+            <div className="product-context">
+              <p>{t.productBody}</p>
+              <a
+                className="proof-link t-learn"
+                href="https://anxzu.com/projects/nodalume/"
+              >
+                {t.engineering}
+                <Arrow />
+              </a>
+            </div>
           </div>
           <figure className="film">
             <div className="film-frame">
