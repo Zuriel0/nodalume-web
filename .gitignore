@@ -4,3 +4,16 @@ dist/
 .env*
 !.env.example
 *.local
+
+# Private automation and local material never belong in this repository.
+.auth/
+.playwright/
+playwright-report/
+test-results/
+storageState*.json
+auth-state*.json
+cookies*.json
+*.webm
+*.mp4
+tmp/
+.DS_Store
