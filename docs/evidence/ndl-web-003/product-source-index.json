@@ -1,0 +1,65 @@
+{
+  "commit": "0d5e0aa3e4ac03f0fdfda13067de82c700b660c2",
+  "files": [
+    {
+      "path": "admin-console/src/features/portal-editor/ScreenFlowEditor.jsx",
+      "sha256": "3e8d3b05b7583031687f849917177315c7cc0055e1c049e382ee5e5f430dc213",
+      "trackedChanges": false
+    },
+    {
+      "path": "admin-console/src/features/portal-editor/EditorLibrary.jsx",
+      "sha256": "5d5619fa0739a6a34a9c9dbb7f1790e90e29d78c099b293153c6ac2889815df9",
+      "trackedChanges": false
+    },
+    {
+      "path": "admin-console/src/features/portal-editor/EditorInspector.jsx",
+      "sha256": "0d27dd9039a477000214c5c9b64acc842f4599a4befbe4f305291a1d0f320a3d",
+      "trackedChanges": false
+    },
+    {
+      "path": "admin-console/src/features/portal-editor/flow/flow-connections.js",
+      "sha256": "377e0a365c2791dc12cfac24179ce37481b3660f2e8dc58078b51c0a1adda077",
+      "trackedChanges": false
+    },
+    {
+      "path": "admin-console/src/features/portal-editor/flow/flow-simulation.js",
+      "sha256": "1ea6c237fd21dd94a6adb46a4584535584779dbe284b73ed75da7c4eb8a13355",
+      "trackedChanges": false
+    },
+    {
+      "path": "admin-console/src/features/portal-editor/EditorPublishing.jsx",
+      "sha256": "50fbc7f4c4bd29fb1602b77841202fb75ce1254f22ac861a22fd0ade585515c3",
+      "trackedChanges": false
+    },
+    {
+      "path": "portal-api/src/modules/portal-documents/portal-document.service.js",
+      "sha256": "ea8804b46af1f195f19d2b9eda4e605c7500cffd15dda0d870c89e8ada649d44",
+      "trackedChanges": false
+    },
+    {
+      "path": "portal-api/src/modules/portal-documents/portal-document.repository.js",
+      "sha256": "1f7ccc1ca83e71e110b7993bcb7a4cf5381f7993fca97e066648b2ccd959ac05",
+      "trackedChanges": false
+    },
+    {
+      "path": "portal-api/src/modules/portal-flows/flow-execution.service.js",
+      "sha256": "db129dc285363d186528b101dd77bf32cb137bbc0dc72ed59c6015abe8d9e5e3",
+      "trackedChanges": false
+    },
+    {
+      "path": "portal-api/src/modules/portal-flows/flow.routes.js",
+      "sha256": "4ec227fcf1369c03818583cc75c6b8fb9b0b8462e525390dabc3506c0c23ca9f",
+      "trackedChanges": false
+    },
+    {
+      "path": "portal-api/src/modules/admin-auth/admin-authorization.js",
+      "sha256": "a226a44dd7cf1e3a5109a3b6627a74d07014009105e3968930f4436e3b4c1a62",
+      "trackedChanges": false
+    },
+    {
+      "path": "admin-console/src/features/auth/AuthProvider.jsx",
+      "sha256": "195549f6dcd3e29bd878fc4110f74f5bfc2935cf530b89607cb655db308ea394",
+      "trackedChanges": false
+    }
+  ]
+}

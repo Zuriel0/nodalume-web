@@ -1,0 +1,24 @@
+{
+  "method": "Actual CUA actions and read-only DOM checks on local site; no video",
+  "checks": {
+    "mobileMenuEnterEscape": true,
+    "menuFocusReturn": true,
+    "mobileAnchorFocus": true,
+    "languagePersistenceOnReload": true,
+    "languageChangePreservesHash": true,
+    "openMediaSpecificationSurvivesLanguageChange": true,
+    "studioSpaceSelect": true,
+    "studioCheckbox": true,
+    "studioStateSurvivesLanguageChange": true,
+    "studioReset": true,
+    "threeMotionCleanupCycles": true,
+    "normalConsoleWarningsAndErrors": 0
+  },
+  "limits": [
+    "No physical touch hardware",
+    "No real screen reader",
+    "Real hidden/visible transition not reproduced in IAB",
+    "No CPU/FPS profiling",
+    "Product role isolation not independently verified"
+  ]
+}

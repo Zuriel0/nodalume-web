@@ -1,0 +1,10 @@
+{
+  "connections": "false",
+  "headings": 8,
+  "mediaSpecOpen": true,
+  "motion": "static-fallback",
+  "overflow": false,
+  "preset": "linked",
+  "transition": "0s",
+  "triggers": "0"
+}

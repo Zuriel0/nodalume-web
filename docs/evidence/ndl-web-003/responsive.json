@@ -1,0 +1,104 @@
+[
+  {
+    "brokenHashes": [],
+    "duplicateIds": [],
+    "lang": "es",
+    "motion": "active",
+    "outside": [],
+    "overflow": false,
+    "triggers": "6",
+    "width": 320
+  },
+  {
+    "brokenHashes": [],
+    "duplicateIds": [],
+    "lang": "es",
+    "motion": "active",
+    "outside": [],
+    "overflow": false,
+    "triggers": "6",
+    "width": 375
+  },
+  {
+    "brokenHashes": [],
+    "duplicateIds": [],
+    "lang": "es",
+    "motion": "active",
+    "outside": [],
+    "overflow": false,
+    "triggers": "6",
+    "width": 768
+  },
+  {
+    "brokenHashes": [],
+    "duplicateIds": [],
+    "lang": "es",
+    "motion": "active",
+    "outside": [],
+    "overflow": false,
+    "triggers": "6",
+    "width": 1024
+  },
+  {
+    "brokenHashes": [],
+    "duplicateIds": [],
+    "lang": "es",
+    "motion": "active",
+    "outside": [],
+    "overflow": false,
+    "triggers": "6",
+    "width": 1440
+  },
+  {
+    "brokenHashes": [],
+    "duplicateIds": [],
+    "lang": "es",
+    "motion": "active",
+    "outside": [],
+    "overflow": false,
+    "triggers": "6",
+    "width": 1920
+  },
+  {
+    "brokenHashes": [],
+    "lang": "en",
+    "outside": [],
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "brokenHashes": [],
+    "lang": "en",
+    "outside": [],
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "brokenHashes": [],
+    "lang": "en",
+    "outside": [],
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "brokenHashes": [],
+    "lang": "en",
+    "outside": [],
+    "overflow": false,
+    "width": 1024
+  },
+  {
+    "brokenHashes": [],
+    "lang": "en",
+    "outside": [],
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "brokenHashes": [],
+    "lang": "en",
+    "outside": [],
+    "overflow": false,
+    "width": 1920
+  }
+]
