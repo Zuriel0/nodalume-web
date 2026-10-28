@@ -181,18 +181,23 @@ export function mountMotion(root) {
         toggleActions: "play pause resume pause",
       },
     });
-    gsap.from(".film-fold", {
-      y: 24,
-      rotation: -3,
-      svgOrigin: "600 338",
-      duration: 1.2,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".film",
-        start: "top 80%",
-        toggleActions: "play pause resume pause",
+    const decisionPath = root.querySelector(".decision-stem path");
+    const decisionLength = decisionPath.getTotalLength();
+    gsap.set(decisionPath, { strokeDasharray: decisionLength });
+    gsap.fromTo(
+      decisionPath,
+      { strokeDashoffset: decisionLength },
+      {
+        strokeDashoffset: 0,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".decision-figure",
+          start: "top 85%",
+          end: "top 45%",
+          scrub: 0.5,
+        },
       },
-    });
+    );
 
     const x = gsap.quickTo(pointer, "x", { duration: 0.9, ease: "power3.out" });
     const y = gsap.quickTo(pointer, "y", { duration: 0.9, ease: "power3.out" });

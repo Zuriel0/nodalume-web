@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { copy, initialLanguage } from "./content.js";
 import LivingInterface from "./components/LivingInterface.jsx";
+import ProductStory from "./components/ProductStory.jsx";
+import { story } from "./product-story.js";
 
 function Arrow({ down = false }) {
   return (
@@ -123,68 +125,6 @@ function Composition() {
   );
 }
 
-function FilmComposition() {
-  return (
-    <svg
-      viewBox="0 0 1200 675"
-      className="film-art"
-      fill="none"
-      aria-hidden="true"
-    >
-      <circle
-        cx="595"
-        cy="338"
-        r="205"
-        stroke="currentColor"
-        strokeWidth="1"
-        opacity=".23"
-      />
-      <circle
-        cx="595"
-        cy="338"
-        r="282"
-        stroke="currentColor"
-        strokeWidth="1"
-        opacity=".1"
-      />
-      <g className="film-fold">
-        <path d="m380 170 240-45 165 247-240 45Z" fill="var(--electric)" />
-        <path
-          d="m415 275 240-45 165 247-240 45Z"
-          fill="var(--canvas)"
-          stroke="var(--ink)"
-          strokeWidth="1.4"
-        />
-        <path
-          d="m620 125 35 105M785 372l35 105"
-          stroke="var(--ink)"
-          strokeDasharray="5 7"
-          opacity=".45"
-        />
-        <path
-          d="M100 450h220c74 0 28-110 110-110h60m229-20h145c86 0 36-110 120-110h116"
-          stroke="var(--ink)"
-          strokeWidth="1.4"
-        />
-        <circle
-          cx="100"
-          cy="450"
-          r="7"
-          fill="var(--signal)"
-          stroke="var(--ink)"
-        />
-        <circle
-          cx="1100"
-          cy="210"
-          r="7"
-          fill="var(--signal)"
-          stroke="var(--ink)"
-        />
-      </g>
-    </svg>
-  );
-}
-
 export default function App() {
   const root = useRef(null);
   const menuButton = useRef(null);
@@ -195,7 +135,7 @@ export default function App() {
     () => matchMedia("(prefers-reduced-motion: reduce)").matches,
   );
   const t = copy[lang];
-  const targets = ["idea", "studio", "product", "horizon"];
+  const targets = ["product", "design-to-logic", "architecture", "horizon"];
 
   useEffect(() => {
     document.documentElement.lang = lang;
@@ -364,7 +304,7 @@ export default function App() {
               ))}
             </h1>
             <p className="hero-intro">{t.intro}</p>
-            <a className="button button-primary t-learn" href="#studio">
+            <a className="button button-primary t-learn" href="#product">
               {t.discover}
               <Arrow />
             </a>
@@ -458,45 +398,8 @@ export default function App() {
             <p className="principle">{t.principle}</p>
           </div>
         </section>
+        <ProductStory text={story[lang]} />
         <LivingInterface texts={t.studio} />
-        <section
-          className="product shell"
-          id="product"
-          tabIndex="-1"
-          aria-labelledby="product-title"
-        >
-          <div className="section-heading">
-            <h2 id="product-title">{t.productTitle}</h2>
-            <div className="product-context">
-              <p>{t.productBody}</p>
-              <a
-                className="proof-link t-learn"
-                href="https://anxzu.com/projects/nodalume/"
-              >
-                {t.engineering}
-                <Arrow />
-              </a>
-            </div>
-          </div>
-          <figure className="film">
-            <div className="film-frame">
-              <FilmComposition />
-              <span className="film-status">
-                <span aria-hidden="true" />
-                {t.filmStatus}
-              </span>
-              <div className="film-copy">
-                <h3>{t.filmTitle}</h3>
-                <p>{t.filmBody}</p>
-              </div>
-            </div>
-            <figcaption>{t.filmCaption}</figcaption>
-          </figure>
-          <a className="text-link t-learn" href="#horizon">
-            {t.scopeCta}
-            <Arrow />
-          </a>
-        </section>
         <section
           className="horizon shell"
           id="horizon"
@@ -540,7 +443,15 @@ export default function App() {
       </main>
       <footer className="footer">
         <div className="shell">
-          <h2>{t.footerTitle}</h2>
+          <h2>{story[lang].close}</h2>
+          <p className="footer-intro">{story[lang].closeBody}</p>
+          <a
+            className="text-link t-learn engineering-close"
+            href="https://anxzu.com/projects/nodalume/"
+          >
+            {t.engineering}
+            <Arrow />
+          </a>
           <a className="text-link t-learn" href="#top">
             {t.top}
             <Arrow />

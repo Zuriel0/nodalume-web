@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { copy } from "../src/content.js";
+import { story } from "../src/product-story.js";
 
 test("EN/ES expose the same complete content structure and stable anchors", () => {
   const shape = (value) =>
@@ -52,5 +53,36 @@ test("all designed foreground/background text pairs meet WCAG AA", () => {
       (x, y) => y - x,
     );
     assert.ok((a + 0.05) / (b + 0.05) >= 4.5, `${foreground}/${background}`);
+  }
+});
+
+test("product media contracts remain complete, bilingual and addressable", () => {
+  const shape = (value) =>
+    Array.isArray(value)
+      ? value.map(shape)
+      : value && typeof value === "object"
+        ? Object.fromEntries(
+            Object.entries(value).map(([key, item]) => [key, shape(item)]),
+          )
+        : typeof value;
+  assert.deepEqual(shape(story.es), shape(story.en));
+  for (const locale of Object.values(story)) {
+    assert.deepEqual(
+      locale.slots.map((slot) => slot.id),
+      ["demo-builder", "demo-inspector", "demo-responsive", "demo-logic"],
+    );
+    assert.equal(locale.media.labels.length, 6);
+    for (const slot of locale.slots) {
+      for (const field of [
+        "feature",
+        "evidence",
+        "format",
+        "alternative",
+        "mobile",
+        "loading",
+      ])
+        assert.ok(slot[field]?.trim(), `${slot.id}: ${field}`);
+      assert.match(slot.ratio, /^\d+ \/ \d+$/);
+    }
   }
 });

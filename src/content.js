@@ -3,9 +3,9 @@ export const copy = {
     language: "Idioma",
     menu: "Menú",
     close: "Cerrar menú",
-    nav: ["La idea", "Explorar", "El producto", "El horizonte"],
+    nav: ["El producto", "Diseño y lógica", "Arquitectura", "Evolución"],
     skip: "Saltar al contenido",
-    discover: "Explorar la idea",
+    discover: "Explorar el producto",
     see: "Conocer el enfoque",
     headline: ["Tu portal.", "A tu", "manera."],
     intro:
@@ -20,7 +20,7 @@ export const copy = {
     philosophy: ["La plantilla", "no debería ser", "tu frontera."],
     philosophyIntro: "Una conexión también puede tener identidad.",
     philosophyBody:
-      "El acceso a una red suele empezar en una pantalla que todas las marcas comparten. Nodalume explora otra posibilidad: dar espacio a la identidad de cada proyecto y conectar su diseño con una experiencia pensada de principio a fin.",
+      "Cuando el portal depende de una plantilla rígida, la identidad y el recorrido se adaptan a sus límites. Nodalume propone partir de las pantallas, sus componentes y las decisiones que las conectan.",
     principle: "Componer. Conectar. Hacerlo propio.",
     studio: {
       title: "Una idea. Más de una forma.",
@@ -51,16 +51,6 @@ export const copy = {
       ],
     },
     engineering: "Ver el caso de ingeniería en ANXZU",
-    productTitle: "Del lienzo a la experiencia.",
-    productBody:
-      "El Portal Builder reúne un editor visual, propiedades de elementos, vistas de escritorio y móvil, y un espacio de lógica. Este es el punto de partida que estamos desarrollando.",
-    filmTitle: "Aquí comienza el recorrido.",
-    filmBody:
-      "Un espacio reservado para la demostración real del Portal Builder.",
-    filmStatus: "Video pendiente",
-    filmCaption:
-      "Composición conceptual. No es una captura ni una simulación del producto.",
-    scopeCta: "Ver el alcance actual",
     mapTitle: "Un sistema abierto a lo que sigue.",
     mapBody:
       "La visión es amplia. El alcance actual, concreto. Este mapa separa lo que existe de lo que todavía estamos explorando.",
@@ -72,16 +62,16 @@ export const copy = {
         kind: "current",
         short: "Diseño visual y personalización.",
         detail:
-          "El editor permite seleccionar elementos, consultar propiedades y alternar las vistas de escritorio y móvil. La demostración pública todavía está pendiente de preparación.",
+          "El código actual incluye biblioteca de bloques, capas, propiedades contextuales y vistas de escritorio, tableta y móvil. La demostración pública sigue pendiente; no se valida un portal concreto mediante este micrositio.",
       },
       {
         id: "connections",
         title: "Experiencias conectadas",
-        status: "Implementación parcial",
+        status: "Integración por validar",
         kind: "partial",
         short: "Una lógica que se puede ver.",
         detail:
-          "Existe un espacio visual con nodos y conexiones. La interfaz no implica que el motor general de ejecución ni las acciones externas estén finalizados. Su alcance requiere validación adicional.",
+          "El código incorpora conexiones por salida, condiciones, simulación y un servicio de ejecución. La integración con sistemas externos y la operación completa no se han probado en esta revisión. Se separa implementación de aceptación operativa.",
       },
       {
         id: "creative-system",
@@ -102,7 +92,6 @@ export const copy = {
           "Las próximas secciones podrán profundizar en arquitectura, recorridos y despliegue cuando exista evidencia verificable. No se anuncia una oferta comercial ni infraestructura cloud en producción.",
       },
     ],
-    footerTitle: "Todo empieza con una conexión.",
     top: "Volver al inicio",
     footerNote: "Creative Systems. Una exploración de producto en desarrollo.",
     meta: "Nodalume Creative Systems. Diseño visual, personalización y experiencias conectadas para portales cautivos.",
@@ -111,9 +100,9 @@ export const copy = {
     language: "Language",
     menu: "Menu",
     close: "Close menu",
-    nav: ["The idea", "Explore", "The product", "The horizon"],
+    nav: ["The product", "Design & logic", "Architecture", "Evolution"],
     skip: "Skip to content",
-    discover: "Explore the idea",
+    discover: "Explore the product",
     see: "Discover the approach",
     headline: ["Your", "portal.", "Your way."],
     intro:
@@ -128,7 +117,7 @@ export const copy = {
     philosophy: ["A template", "shouldn’t be", "your limit."],
     philosophyIntro: "A connection can have an identity, too.",
     philosophyBody:
-      "Access to a network often starts with a screen that every brand shares. Nodalume explores another possibility: making room for each project’s identity and connecting its design with a considered end-to-end experience.",
+      "When a portal depends on a rigid template, identity and the journey must fit its limits. Nodalume starts with screens, their components and the decisions that connect them.",
     principle: "Compose. Connect. Make it yours.",
     studio: {
       title: "One idea. More than one way.",
@@ -158,15 +147,6 @@ export const copy = {
       ],
     },
     engineering: "Explore the engineering case on ANXZU",
-    productTitle: "From canvas to experience.",
-    productBody:
-      "The Portal Builder brings together a visual editor, element properties, desktop and mobile views, and a logic workspace. This is the starting point we’re developing.",
-    filmTitle: "The walkthrough starts here.",
-    filmBody: "A space reserved for the real Portal Builder demonstration.",
-    filmStatus: "Video coming later",
-    filmCaption:
-      "Conceptual composition. Not a product screenshot or simulation.",
-    scopeCta: "See the current scope",
     mapTitle: "A system open to what comes next.",
     mapBody:
       "The vision is broad. The current scope is specific. This map separates what exists from what we’re still exploring.",
@@ -178,16 +158,16 @@ export const copy = {
         kind: "current",
         short: "Visual design and customization.",
         detail:
-          "The editor supports selecting elements, inspecting properties and switching between desktop and mobile views. A public demonstration still needs to be prepared.",
+          "The current source includes a block library, layers, contextual properties and desktop, tablet and mobile views. Public demonstration is still pending; this microsite does not validate a specific portal.",
       },
       {
         id: "connections",
         title: "Connected experiences",
-        status: "Partial implementation",
+        status: "Integration to validate",
         kind: "partial",
         short: "Logic you can see.",
         detail:
-          "A visual workspace with nodes and connections exists. Its interface does not mean the general execution engine or external actions are complete. Their scope requires further validation.",
+          "The source includes per-output connections, conditions, simulation and an execution service. External integrations and complete operation have not been tested in this review. Implementation is distinct from operational acceptance.",
       },
       {
         id: "creative-system",
@@ -205,10 +185,9 @@ export const copy = {
         kind: "future",
         short: "A horizon, not a delivery promise.",
         detail:
-          "Future sections may explore architecture, journeys and deployment when verifiable evidence is available. No commercial offering or production cloud infrastructure is being announced.",
+          "Next steps include validating complete journeys and preparing real demonstrations without private data. Cloud, high availability and a commercial offering remain a horizon, with no dates or verified production operation.",
       },
     ],
-    footerTitle: "It all starts with a connection.",
     top: "Back to the beginning",
     footerNote: "Creative Systems. A product exploration in development.",
     meta: "Nodalume Creative Systems. Visual design, customization and connected experiences for captive portals.",
