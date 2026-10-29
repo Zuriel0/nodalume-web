@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { copy } from "../src/content.js";
 import { story } from "../src/product-story.js";
+import { growth } from "../src/data-growth.js";
 
 test("EN/ES expose the same complete content structure and stable anchors", () => {
   const shape = (value) =>
@@ -84,5 +85,29 @@ test("product media contracts remain complete, bilingual and addressable", () =>
         assert.ok(slot[field]?.trim(), `${slot.id}: ${field}`);
       assert.match(slot.ratio, /^\d+ \/ \d+$/);
     }
+  }
+});
+
+test("growth narrative preserves bilingual scope and ordered journey", () => {
+  const shape = (value) =>
+    Array.isArray(value)
+      ? value.map(shape)
+      : value && typeof value === "object"
+        ? Object.fromEntries(
+            Object.entries(value).map(([key, item]) => [key, shape(item)]),
+          )
+        : typeof value;
+  assert.deepEqual(shape(growth.es), shape(growth.en));
+  for (const [lang, locale] of Object.entries(growth)) {
+    assert.deepEqual(
+      locale.stages.map((stage) => stage.id),
+      ["connect", "understand", "analyze", "grow"],
+    );
+    assert.equal(locale.signalLabels.length, 4);
+    assert.equal(locale.scope.length, 4);
+    assert.equal(copy[lang].nav.length, 5);
+    assert.ok(locale.concept.trim());
+    for (const item of [...locale.stages, ...locale.scope])
+      assert.ok(item.title.trim() && item.body.trim());
   }
 });

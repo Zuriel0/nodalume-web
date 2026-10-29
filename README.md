@@ -43,3 +43,13 @@ La continuación de `codex/ndl-web-002-creative-evolution` vive en `codex/ndl-we
 - [Inventario de movimiento](docs/ndl-web-003-motion.md)
 
 `npm run build` y `npm run preview` permiten revisar localmente. No desplegar esta rama sin aprobación posterior.
+
+## NDL-WEB-004 — rama consolidada
+
+`codex/ndl-web-004-data-growth` conserva los commits y evidencias de 002/003 y añade una escena ES/EN de conexión, señales y decisión humana. La visualización es conceptual; no usa registros reales ni representa resultados comerciales.
+
+- [Reporte, auditoría de capacidades y sincronización](docs/ndl-web-004-data-growth.md)
+- [Clonar y ejecutar ambos proyectos desde otro equipo](docs/clone-and-run.md)
+- [Rama consolidada en GitHub](https://github.com/Zuriel0/nodalume-web/tree/codex/ndl-web-004-data-growth)
+
+Main y GitHub Pages conservan NDL-WEB-001. La rama de desarrollo no se integra ni despliega automáticamente.

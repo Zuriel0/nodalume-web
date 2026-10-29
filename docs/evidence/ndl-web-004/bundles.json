@@ -1,0 +1,42 @@
+{
+  "before": [
+    {
+      "file": "index-7W_6gGlb.css",
+      "bytes": 27202,
+      "gzip": 6213,
+      "sha256": "44f555ecb55151d66be6ff6fee2f5f2dbf7fc20309744d5a5cfc7dc71fca81c9"
+    },
+    {
+      "file": "index-rBRmjatT.js",
+      "bytes": 258097,
+      "gzip": 79814,
+      "sha256": "49a08c7dc29772c0930e231e44303675a201477e7a326fa7988a3e7993d0fbc7"
+    },
+    {
+      "file": "motion-DPQl15yg.js",
+      "bytes": 117326,
+      "gzip": 45408,
+      "sha256": "29658fb3b9eaee097a880daabd74c7b83fa92e118b9b75b94c22be22d60b68e7"
+    }
+  ],
+  "after": [
+    {
+      "file": "index-1bO4mBX-.css",
+      "bytes": 32580,
+      "gzip": 7023,
+      "sha256": "e4988629dae6d881fba7ac42ae03780ec6cd7379d2fb4907cd9156d676232653"
+    },
+    {
+      "file": "index-Ca2i9HSy.js",
+      "bytes": 265404,
+      "gzip": 82076,
+      "sha256": "05243527b7d84bfac60305dcb2fdb171467a477fa6392b23fcbbd06185d672f4"
+    },
+    {
+      "file": "motion-CLrwNVpO.js",
+      "bytes": 117909,
+      "gzip": 45539,
+      "sha256": "fc5cc9698f51b1061aae82684b978cc3bf6fd26debda195e744f454bdc2e6d87"
+    }
+  ]
+}

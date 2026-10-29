@@ -199,6 +199,42 @@ export function mountMotion(root) {
       },
     );
 
+    // A single finite sequence explains the conceptual relationship; no data is simulated.
+    const growthScene = root.querySelector(".growth-figure");
+    const growthWires = growthScene.querySelectorAll(".growth-wire path");
+    growthWires.forEach((path) =>
+      gsap.set(path, { strokeDasharray: path.getTotalLength() }),
+    );
+    const growthTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: growthScene,
+        start: "top 85%",
+        end: "bottom 45%",
+        scrub: 0.5,
+      },
+    });
+    growthTimeline
+      .fromTo(
+        growthWires[0],
+        { strokeDashoffset: growthWires[0].getTotalLength() },
+        { strokeDashoffset: 0, duration: 0.6, ease: "none" },
+      )
+      .from(
+        ".growth-signals li",
+        { x: 8, opacity: 0.75, stagger: 0.08, duration: 0.4, ease: "none" },
+        "-=0.15",
+      )
+      .fromTo(
+        growthWires[1],
+        { strokeDashoffset: growthWires[1].getTotalLength() },
+        { strokeDashoffset: 0, duration: 0.6, ease: "none" },
+      )
+      .from(
+        ".growth-decision",
+        { scale: 0.97, duration: 0.4, ease: "none" },
+        "-=0.2",
+      );
+
     const x = gsap.quickTo(pointer, "x", { duration: 0.9, ease: "power3.out" });
     const y = gsap.quickTo(pointer, "y", { duration: 0.9, ease: "power3.out" });
     const rotation = gsap.quickTo(pointer, "rotation", {

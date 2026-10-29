@@ -1,0 +1,22 @@
+{
+  "before": {
+    "ambient": "paused",
+    "offsets": [
+      "91px",
+      "130px"
+    ],
+    "y": 8005
+  },
+  "after": {
+    "ambient": "paused",
+    "offsets": [
+      "0px",
+      "0px"
+    ],
+    "overflow": false,
+    "pinSpacers": 0,
+    "y": 9005
+  },
+  "fpsMeasured": false,
+  "cpuMeasured": false
+}

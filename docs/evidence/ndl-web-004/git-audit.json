@@ -1,0 +1,25 @@
+[
+  {
+    "repository": "communications-electronics-portfolio",
+    "branch": "main",
+    "head": "1ccd9e8d694052eb3191282e7794afa640e47895",
+    "originMain": "1ccd9e8d694052eb3191282e7794afa640e47895",
+    "headVsOriginMain": "0\t0",
+    "localOnlyCommits": [],
+    "remote": "https://github.com/Zuriel0/communications-electronics-portfolio.git"
+  },
+  {
+    "repository": "nodalume-web",
+    "branch": "codex/ndl-web-004-data-growth",
+    "head": "786743b35d0d759fafd04059e7a6ab5deaa3b896",
+    "originMain": "d4f833004cba3c24aa4a252fa075d6fca250617f",
+    "headVsOriginMain": "4\t0",
+    "localOnlyCommits": [
+      "786743b35d0d759fafd04059e7a6ab5deaa3b896 docs: audit product capabilities and record NDL-WEB-003 review evidence",
+      "94e40c10a7a707583c0ec8bc8ab8d5ba8df18163 feat: tell the Nodalume product story with evidence-scoped chapters",
+      "8d48a14b46c2e06bcc2c84c5aa654f5e7cfb6653 docs: record separation, public verification and creative review QA",
+      "de5eacaa17fc5853f7d58ef3dcb505e8feb7ca3c feat: evolve Creative Systems with interactive compositions"
+    ],
+    "remote": "https://github.com/Zuriel0/nodalume-web.git"
+  }
+]

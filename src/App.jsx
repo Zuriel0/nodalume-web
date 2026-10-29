@@ -1,8 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { copy, initialLanguage } from "./content.js";
 import LivingInterface from "./components/LivingInterface.jsx";
 import ProductStory from "./components/ProductStory.jsx";
 import { story } from "./product-story.js";
+import { growth } from "./data-growth.js";
+import DataGrowth from "./components/DataGrowth.jsx";
 
 function Arrow({ down = false }) {
   return (
@@ -135,9 +137,15 @@ export default function App() {
     () => matchMedia("(prefers-reduced-motion: reduce)").matches,
   );
   const t = copy[lang];
-  const targets = ["product", "design-to-logic", "architecture", "horizon"];
+  const targets = [
+    "product",
+    "design-to-logic",
+    "architecture",
+    "data-growth",
+    "horizon",
+  ];
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.documentElement.lang = lang;
     document.querySelector('meta[name="description"]').content =
       copy[lang].meta;
@@ -147,6 +155,20 @@ export default function App() {
       /* Storage is optional. */
     }
   }, [lang]);
+
+  // The browser can resolve an initial hash before the React target exists.
+  // Run once after commit; subsequent links and history retain native scrolling.
+  useLayoutEffect(() => {
+    try {
+      const id = decodeURIComponent(window.location.hash.slice(1));
+      if (id)
+        document
+          .getElementById(id)
+          ?.scrollIntoView({ behavior: "instant", block: "start" });
+    } catch {
+      /* A malformed or unknown public hash leaves the page usable. */
+    }
+  }, []);
 
   useEffect(() => {
     const query = matchMedia("(prefers-reduced-motion: reduce)");
@@ -399,6 +421,7 @@ export default function App() {
           </div>
         </section>
         <ProductStory text={story[lang]} />
+        <DataGrowth text={growth[lang]} />
         <LivingInterface texts={t.studio} />
         <section
           className="horizon shell"

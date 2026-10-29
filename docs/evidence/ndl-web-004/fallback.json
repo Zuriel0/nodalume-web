@@ -1,0 +1,21 @@
+{
+  "growthTransforms": [
+    "",
+    "",
+    "",
+    ""
+  ],
+  "motion": "static-fallback",
+  "scopeOpen": true,
+  "sections": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "signals": 4,
+  "studio": "linked",
+  "triggers": "0"
+}

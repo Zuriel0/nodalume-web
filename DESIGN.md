@@ -55,3 +55,7 @@ Only the Hero has an ambient loop. Separate back/front layer offsets and bounded
 ## NDL-WEB-003 — continuación local
 
 La rama sucesora conserva la identidad de 002. La arquitectura editorial ahora sigue libertad → problema → composición → decisiones → control → exploración conceptual → evolución → caso técnico. Portal Builder tiene un plano 16:9 dominante; inspector un contrapunto 4:3; responsive un plano vertical violeta; Design to Logic una escena Ink. Los espacios audiovisuales están vacíos e identificados, sin falso reproductor. Solo se añade el dibujo scroll de una relación, sustituyendo la entrada de la película anterior; el total de seis triggers se conserva. Ver `docs/ndl-web-003-design-plan.md`, `docs/ndl-web-003-storyboard.md` y el reporte de esta fase.
+
+## NDL-WEB-004 — datos como contexto
+
+Entre Control y Living Interface aparece una escena editorial de oportunidad: conexión → categorías de señales → decisión humana. Usa las mismas fuentes y cinco colores; no introduce dashboards, gráficas numéricas ni métricas de negocio. La secuencia de cuatro etapas está completa sin animación. Una timeline de scroll dibuja dos trazos y ordena las señales; no hay loops nuevos ni pinning. El texto de alcance diferencia consentimiento de acceso, identidad declarada, observación de navegador, accounting y resultados de negocio. Ver el plan y reporte 004.

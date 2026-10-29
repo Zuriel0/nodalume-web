@@ -1,0 +1,14 @@
+{
+  "src/App.jsx": "d0ac5722a0ba0158516fbf43bd3305d69f1e88c9a47a5bde083c3dc77ba7c816",
+  "src/components/DataGrowth.jsx": "0b3ac5930d1f8a52bfa1ceae8045da18dbd6e7cc32b8f6ca665f7b0a06862c89",
+  "src/components/LivingInterface.jsx": "9306544bf60e8d08eeb0c553ee6f47d2bd44aaa79fb4728c19b7998b86114c7b",
+  "src/components/ProductStory.jsx": "2dfe8880bf077b99a2db9f0e163bd037de16e6c88649506900e467f0f15b5816",
+  "src/data-growth.js": "d0a77acefb1589e8a9ce3dfff9ba348e683c6604a75381547de0c61ab6a0e809",
+  "src/content.js": "17b9312454483112850060939f4e1cbeb79ab53d8385848ac0f314b8dfca5964",
+  "src/product-story.js": "75f2beeb119f102fcdc9c5f6190f13121776d5cc4203dce7aa6c062f2d8cd140",
+  "src/motion.js": "afbbb65de32e4ec7a76376051eb5988ffaed4f06e4110fd429755613295b2a7e",
+  "src/styles.css": "040884c4e8feaaa44bd902fecb2a32dcc5fb374c8c7cfcf358d8693bc707943d",
+  "package.json": "07fb2626570dac3a6edd2ac740068677cbd7dee6c1967f32a7364987dfc5eea5",
+  "package-lock.json": "c919f9925a1e3edd2643021ef137b9649c67995a3cc3c9d2ddbf5d7ba05016fc",
+  ".github/workflows/deploy.yml": "21d7c8d4a56ee66b7caa62d3ea09518e845d2aa899bd8d0687f432c11ab09bd5"
+}
