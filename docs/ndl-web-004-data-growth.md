@@ -96,7 +96,7 @@ Doce capturas completas de la sección, una por idioma/ancho. Se hicieron con **
 
 Rama consolidada autorizada: [codex/ndl-web-004-data-growth](https://github.com/Zuriel0/nodalume-web/tree/codex/ndl-web-004-data-growth). La publicación Git de esta rama conserva los cuatro commits previos como ancestros: `de5eaca`, `8d48a14`, `94e40c1`, `786743b`. Sus ramas locales originales permanecen disponibles. No se crea un merge innecesario ni se cambia main.
 
-El SHA final se entrega en el cierre de la fase. La comprobación remota/clonación se añade al final de este reporte después del primer push validado. La rama no dispara Pages: el workflow solo escucha main y ambos jobs requieren `refs/heads/main`.
+El commit de implementación publicado y clonado es `5104b6479ee29ce4877ef9f99fc03580aa3af2be`. El comprobante de esa clonación se incorpora en un commit posterior de documentación; su SHA final se entrega en el cierre. Los archivos de runtime y sus hashes medidos permanecen iguales. La rama no dispara Pages: el workflow solo escucha main y ambos jobs requieren `refs/heads/main`.
 
 [Comandos exactos para clonar y ejecutar ambos proyectos](clone-and-run.md). Es importante clonar la rama consolidada de Nodalume Web: una clonación de main obtiene únicamente el baseline publicado.
 
@@ -107,3 +107,11 @@ Runtime: `src/components/DataGrowth.jsx`, `src/data-growth.js`, integración/ent
 Pendiente: validar funciones de datos con pruebas integrales y muestras autorizadas; autorización específica para futuros medios; revisión comercial de la narrativa; dispositivos físicos/otros motores/lector de pantalla y transición hidden/visible real, que IAB no reproduce de forma fiable. No se convierte Accessibility 100 en certificación WCAG.
 
 GO para sincronizar/revisar la rama de desarrollo. No se modifican aplicación administrativa, laboratorio, ANXZU, DNS o Pages. No hay merge a main de Nodalume Web, grabación, release ni despliegue automático.
+
+## Comprobación remota completada
+
+El primer push creó la rama consolidada y configuró su upstream, sin force. `git ls-remote` confirmó el SHA de implementación `5104b6479ee29ce4877ef9f99fc03580aa3af2be` y main intacto en `d4f833004cba3c24aa4a252fa075d6fca250617f`.
+
+Se ejecutó una clonación HTTPS con helpers de credenciales deshabilitados, sin pedir autenticación, en una carpeta temporal nueva. Pasaron npm ci, lint, 4 pruebas, build y diff check. El árbol quedó limpio. Se verificaron los cuatro ancestros 002/003, sus reportes y capturas, y los hashes del runtime frente al build medido. [Comprobante de clonación](evidence/ndl-web-004/nodalume-clone-check.json).
+
+ANXZU también se recuperó y compiló desde una clonación anónima de main. Su SHA permanece `1ccd9e8d694052eb3191282e7794afa640e47895`; no se creó ni publicó otro commit allí. Estos checks prueban recuperación desde GitHub en un directorio limpio del equipo actual, no una prueba física en otra computadora o sistema operativo. Los comandos para repetirlo están en `docs/clone-and-run.md`.
