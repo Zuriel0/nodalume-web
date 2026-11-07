@@ -17,3 +17,11 @@ cookies*.json
 *.mp4
 tmp/
 .DS_Store
+
+# Owner-provided recordings for local review, including restricted branding.
+/videos/
+
+# Three product recordings explicitly approved for public use.
+!/public/media/portal-builder.mp4
+!/public/media/inspector.mp4
+!/public/media/responsive.mp4

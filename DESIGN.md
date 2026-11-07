@@ -59,3 +59,10 @@ La rama sucesora conserva la identidad de 002. La arquitectura editorial ahora s
 ## NDL-WEB-004 — datos como contexto
 
 Entre Control y Living Interface aparece una escena editorial de oportunidad: conexión → categorías de señales → decisión humana. Usa las mismas fuentes y cinco colores; no introduce dashboards, gráficas numéricas ni métricas de negocio. La secuencia de cuatro etapas está completa sin animación. Una timeline de scroll dibuja dos trazos y ordena las señales; no hay loops nuevos ni pinning. El texto de alcance diferencia consentimiento de acceso, identidad declarada, observación de navegador, accounting y resultados de negocio. Ver el plan y reporte 004.
+
+
+## Revisión comercial — 2026-11-07
+
+Se conservan paleta, fuentes, composición y motion. La presentación cambia de documentación de una exploración a una introducción de producto: identidad → diseño → recorrido → control → información → partes de un portal → preguntas frecuentes → contacto. Living Interface conserva su interacción y ahora relaciona Marca, Contenido y Acción mediante Diseña / Organiza / Conecta, con descripciones y destinos pertinentes. Sigue siendo un diagrama explicativo, sin aparentar un editor funcional.
+
+Se retiran de la interfaz las notas de construcción, contratos de formatos y duración, placeholders de grabación y estados internos de auditoría. Los tres medios aprobados se presentan sin etiquetas de producción; el video de Logic Builder sigue fuera. Contacto es el CTA del cierre y el caso técnico es una vía secundaria. Los límites reales del producto se expresan en lenguaje de cliente, sin promesas de resultados.

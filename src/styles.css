@@ -1857,10 +1857,9 @@ section:focus {
 }
 .growth-composition {
   display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(42px, 0.35fr) minmax(
-      0,
-      1.4fr
-    ) minmax(42px, 0.35fr) minmax(0, 1fr);
+  grid-template-columns:
+    minmax(0, 0.8fr) minmax(42px, 0.35fr) minmax(0, 1.4fr)
+    minmax(42px, 0.35fr) minmax(0, 1fr);
   align-items: center;
   gap: clamp(0.75rem, 2vw, 2rem);
   padding: clamp(1.5rem, 3vw, 3rem);
@@ -2166,4 +2165,54 @@ section:focus {
   .growth-close > p {
     font-size: 1.125rem;
   }
+}
+
+/* Approved product recordings: native controls and original framing. */
+.media-aperture.media-aperture-video {
+  display: block;
+  padding: 0;
+  background: var(--ink);
+}
+.media-aperture-video::before,
+.media-aperture-video::after {
+  display: none;
+}
+.product-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: var(--ink);
+}
+.product-video:focus-visible {
+  outline: 3px solid var(--electric);
+  outline-offset: -4px;
+}
+.logic-story .product-video:focus-visible {
+  outline-color: var(--signal);
+}
+.recording-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.media-space figcaption > .recording-note {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+}
+
+/* Commercial review: retain the visual system and clarify feature destinations. */
+.contact-close {
+  margin: 2rem 2rem 1rem 0;
+}
+.contact-close:hover {
+  background: var(--signal);
+  color: var(--ink);
+}
+.studio-feature-link {
+  margin-top: 0.25rem;
+}
+.studio-shape text {
+  font-family: var(--font-body);
 }

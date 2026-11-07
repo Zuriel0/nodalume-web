@@ -1,53 +1,44 @@
-function MediaSpace({ item, text }) {
-  const values = [
-    item.feature,
-    item.evidence,
-    item.format,
-    item.alternative,
-    item.mobile,
-    item.loading,
-  ];
+import { useState } from "react";
+import RecordedDemo from "./RecordedDemo.jsx";
+import { productVideos } from "../product-videos.js";
+
+function MediaSpace({ item, text, paused }) {
+  const [failed, setFailed] = useState(false);
+  const asset = productVideos[item.id];
   return (
-    <figure className={`media-space media-${item.kind}`} id={item.id}>
+    <figure className={`media-space media-${item.kind} has-video`} id={item.id}>
       <div
-        className="media-aperture"
-        style={{ "--media-ratio": item.ratio }}
-        aria-labelledby={`${item.id}-title`}
-        aria-describedby={`${item.id}-note`}
+        className="media-aperture media-aperture-video"
+        style={{ "--media-ratio": `${asset.width} / ${asset.height}` }}
       >
-        <span className="media-name" id={`${item.id}-title`}>
-          {item.name}
-        </span>
-        <span className="media-word" aria-hidden="true">
-          {item.word}
-        </span>
-        <span className="media-pending">{text.pending}</span>
-        <span className="media-ratio" aria-hidden="true">
-          {item.ratio.replaceAll(" / ", ":")}
-        </span>
+        {failed ? (
+          <img
+            className="product-video"
+            src={asset.poster}
+            width={asset.width}
+            height={asset.height}
+            alt={item.alternative}
+            loading="lazy"
+          />
+        ) : (
+          <RecordedDemo
+            asset={asset}
+            label={item.name}
+            descriptionId={`${item.id}-note`}
+            paused={paused}
+            onFailure={() => setFailed(true)}
+          />
+        )}
       </div>
       <figcaption>
-        <p id={`${item.id}-note`}>{text.note}</p>
-        <details className="media-spec">
-          <summary>
-            {text.specification}
-            <span aria-hidden="true">+</span>
-          </summary>
-          <dl>
-            {values.map((value, index) => (
-              <div key={text.labels[index]}>
-                <dt>{text.labels[index]}</dt>
-                <dd>{value}</dd>
-              </div>
-            ))}
-          </dl>
-        </details>
+        <p id={`${item.id}-note`}>{item.alternative}</p>
+        {failed && <p role="status">{text.failed}</p>}
       </figcaption>
     </figure>
   );
 }
 
-export default function ProductStory({ text }) {
+export default function ProductStory({ text, mediaPaused }) {
   const b = text.builder,
     l = text.logic,
     c = text.control;
@@ -68,22 +59,33 @@ export default function ProductStory({ text }) {
             <li key={part}>{part}</li>
           ))}
         </ul>
-        <MediaSpace item={text.slots[0]} text={text.media} />
+        <MediaSpace
+          item={text.slots[0]}
+          text={text.media}
+          paused={mediaPaused}
+        />
         <div className="product-pair inspector-scene">
           <div className="product-explanation">
             <h3>{b.inspectorTitle}</h3>
             <p>{b.inspectorBody}</p>
           </div>
-          <MediaSpace item={text.slots[1]} text={text.media} />
+          <MediaSpace
+            item={text.slots[1]}
+            text={text.media}
+            paused={mediaPaused}
+          />
         </div>
         <div className="product-pair responsive-scene">
           <div className="product-explanation">
             <h3>{b.responsiveTitle}</h3>
             <p>{b.responsiveBody}</p>
           </div>
-          <MediaSpace item={text.slots[2]} text={text.media} />
+          <MediaSpace
+            item={text.slots[2]}
+            text={text.media}
+            paused={mediaPaused}
+          />
         </div>
-        <p className="evidence-note">{text.evidenceNote}</p>
       </section>
       <section
         className="logic-story"
@@ -96,7 +98,7 @@ export default function ProductStory({ text }) {
             <h2 id="logic-title">{l.title}</h2>
             <p>{l.intro}</p>
           </div>
-          <figure className="decision-figure">
+          <figure className="decision-figure" id="demo-logic">
             <div className="decision-map">
               <span className="decision-screen">{l.screen}</span>
               <span className="decision-event">{l.event}</span>
@@ -107,11 +109,7 @@ export default function ProductStory({ text }) {
                 fill="none"
                 aria-hidden="true"
               >
-                <path
-                  d="M0 20H160"
-                      stroke="currentColor"
-                  strokeWidth="2"
-                />
+                <path d="M0 20H160" stroke="currentColor" strokeWidth="2" />
               </svg>
               <span className="decision-rule">{l.rule}</span>
               <div className="decision-results">
@@ -121,8 +119,6 @@ export default function ProductStory({ text }) {
             </div>
             <figcaption>{l.caption}</figcaption>
           </figure>
-          <p className="logic-scope">{l.source}</p>
-          <MediaSpace item={text.slots[3]} text={text.media} />
           <a className="text-link" href="#architecture">
             {l.next}
             <span aria-hidden="true">↓</span>
@@ -158,7 +154,6 @@ export default function ProductStory({ text }) {
             <p>{c.tenantBody}</p>
           </div>
         </div>
-        <p className="evidence-note">{c.scope}</p>
         <div className="chapter-links">
           <a className="proof-link" href="#horizon">
             {c.evolution}

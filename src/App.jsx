@@ -147,6 +147,7 @@ export default function App() {
 
   useLayoutEffect(() => {
     document.documentElement.lang = lang;
+    document.title = copy[lang].title;
     document.querySelector('meta[name="description"]').content =
       copy[lang].meta;
     try {
@@ -337,10 +338,6 @@ export default function App() {
           </div>
           <figure className="hero-figure">
             <Composition />
-            <figcaption>
-              <span>{t.concept}</span>
-              <span className="figure-note">{t.conceptNote}</span>
-            </figcaption>
           </figure>
           <div className="hero-bottom">
             <a className="scroll-link t-learn" href="#idea">
@@ -420,7 +417,7 @@ export default function App() {
             <p className="principle">{t.principle}</p>
           </div>
         </section>
-        <ProductStory text={story[lang]} />
+        <ProductStory text={story[lang]} mediaPaused={paused || reduced} />
         <DataGrowth text={growth[lang]} />
         <LivingInterface texts={t.studio} />
         <section
@@ -468,6 +465,13 @@ export default function App() {
         <div className="shell">
           <h2>{story[lang].close}</h2>
           <p className="footer-intro">{story[lang].closeBody}</p>
+          <a
+            className="button button-primary t-learn contact-close"
+            href="https://anxzu.com/#contact"
+          >
+            {t.contact}
+            <Arrow />
+          </a>
           <a
             className="text-link t-learn engineering-close"
             href="https://anxzu.com/projects/nodalume/"

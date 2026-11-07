@@ -22,7 +22,7 @@ export default function LivingInterface({ texts }) {
           className="studio-canvas"
           data-composition={composition}
           data-connections={connections}
-          aria-describedby="studio-disclaimer"
+          aria-label={texts.diagram}
         >
           <svg
             className="studio-art"
@@ -68,6 +68,15 @@ export default function LivingInterface({ texts }) {
                 strokeWidth="1"
                 opacity=".3"
               />
+              <text
+                x="225"
+                y="230"
+                fill="var(--ink)"
+                fontSize="22"
+                fontWeight="600"
+              >
+                {texts.layers[0]}
+              </text>
             </g>
             <g className="studio-shape studio-shape-b">
               <path
@@ -87,6 +96,15 @@ export default function LivingInterface({ texts }) {
                 strokeWidth="1"
                 opacity=".5"
               />
+              <text
+                x="425"
+                y="322"
+                fill="var(--surface)"
+                fontSize="22"
+                fontWeight="600"
+              >
+                {texts.layers[1]}
+              </text>
             </g>
             <g className="studio-shape studio-shape-c">
               <path
@@ -109,6 +127,15 @@ export default function LivingInterface({ texts }) {
                 stroke="var(--ink)"
                 strokeWidth="1.5"
               />
+              <text
+                x="625"
+                y="435"
+                fill="var(--ink)"
+                fontSize="22"
+                fontWeight="600"
+              >
+                {texts.layers[2]}
+              </text>
             </g>
             <path
               d="M67 80h26M80 67v26m827 474h26m-13-13v26"
@@ -172,9 +199,10 @@ export default function LivingInterface({ texts }) {
           >
             {texts.reset}
           </button>
-          <p className="studio-disclaimer" id="studio-disclaimer">
-            {texts.disclaimer}
-          </p>
+          <a className="proof-link studio-feature-link" href={selected.href}>
+            {texts.next}
+            <span aria-hidden="true">↓</span>
+          </a>
         </div>
       </div>
     </section>

@@ -27,3 +27,10 @@ React is specified in the brief. Independent Vite package, GSAP and ScrollTrigge
 ## Success
 
 A functional local landing with honest content, cinematic motion, static reduced-motion composition, responsive evidence and documented design decisions. Public media and conversion strategy remain future decisions.
+
+
+## Revisión comercial — 2026-11-07
+
+La autorización del propietario para publicar y hacer push reemplaza las restricciones de publicación de la fase inicial. El sitio ahora se dirige a quien evalúa un portal para su marca: diseño visual, propiedades, vistas responsive, recorridos y gestión de cambios. El proyecto sigue en desarrollo y las integraciones externas y operación integral continúan en validación.
+
+Tres grabaciones de diseño, proporcionadas por el propietario, están aprobadas para la web y el repositorio públicos. Logic Builder con Starbucks permanece privado. La landing no cambia el backend ni constituye una oferta de autoservicio. Contacto y caso técnico llevan a destinos reales de ANXZU.
