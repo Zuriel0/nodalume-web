@@ -1,0 +1,44 @@
+[
+  {
+    "motion": "active",
+    "triggers": "7"
+  },
+  {
+    "growthInlineTransforms": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "motion": "paused",
+    "triggers": "0"
+  },
+  {
+    "motion": "active",
+    "triggers": "7"
+  },
+  {
+    "growthInlineTransforms": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "motion": "paused",
+    "triggers": "0"
+  },
+  {
+    "motion": "active",
+    "triggers": "7"
+  },
+  {
+    "growthInlineTransforms": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "motion": "paused",
+    "triggers": "0"
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "profile": "mobile",
+    "run": 1,
+    "lighthouse": "13.6.0",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "performance": 100,
+    "accessibility": 100,
+    "lcp": 753.1842999999999,
+    "cls": 0,
+    "tbt": 0,
+    "state": "{\"reduced\":false,\"motion\":\"active\",\"triggers\":\"6\",\"ambient\":\"playing\",\"heading\":\"Tu portal. A tu manera.\",\"studioPreset\":\"open\",\"studioTransition\":\"0.85s\",\"motionDisabled\":false,\"overflow\":false,\"motionRequested\":true}",
+    "warnings": []
+  },
+  {
+    "profile": "mobile",
+    "run": 2,
+    "lighthouse": "13.6.0",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "performance": 100,
+    "accessibility": 100,
+    "lcp": 752.8774000000001,
+    "cls": 0,
+    "tbt": 0,
+    "state": "{\"reduced\":false,\"motion\":\"active\",\"triggers\":\"6\",\"ambient\":\"playing\",\"heading\":\"Tu portal. A tu manera.\",\"studioPreset\":\"open\",\"studioTransition\":\"0.85s\",\"motionDisabled\":false,\"overflow\":false,\"motionRequested\":true}",
+    "warnings": []
+  },
+  {
+    "profile": "mobile",
+    "run": 3,
+    "lighthouse": "13.6.0",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "performance": 100,
+    "accessibility": 100,
+    "lcp": 752.1266,
+    "cls": 0,
+    "tbt": 0,
+    "state": "{\"reduced\":false,\"motion\":\"active\",\"triggers\":\"6\",\"ambient\":\"playing\",\"heading\":\"Tu portal. A tu manera.\",\"studioPreset\":\"open\",\"studioTransition\":\"0.85s\",\"motionDisabled\":false,\"overflow\":false,\"motionRequested\":true}",
+    "warnings": []
+  },
+  {
+    "profile": "desktop",
+    "run": 1,
+    "lighthouse": "13.6.0",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "performance": 100,
+    "accessibility": 100,
+    "lcp": 203.8523,
+    "cls": 0,
+    "tbt": 0,
+    "state": "{\"reduced\":false,\"motion\":\"active\",\"triggers\":\"6\",\"ambient\":\"playing\",\"heading\":\"Tu portal. A tu manera.\",\"studioPreset\":\"open\",\"studioTransition\":\"0.85s\",\"motionDisabled\":false,\"overflow\":false,\"motionRequested\":true}",
+    "warnings": []
+  },
+  {
+    "profile": "desktop",
+    "run": 2,
+    "lighthouse": "13.6.0",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "performance": 100,
+    "accessibility": 100,
+    "lcp": 323.4874,
+    "cls": 0,
+    "tbt": 0,
+    "state": "{\"reduced\":false,\"motion\":\"active\",\"triggers\":\"6\",\"ambient\":\"playing\",\"heading\":\"Tu portal. A tu manera.\",\"studioPreset\":\"open\",\"studioTransition\":\"0.85s\",\"motionDisabled\":false,\"overflow\":false,\"motionRequested\":true}",
+    "warnings": []
+  },
+  {
+    "profile": "desktop",
+    "run": 3,
+    "lighthouse": "13.6.0",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "performance": 100,
+    "accessibility": 100,
+    "lcp": 202.38099999999997,
+    "cls": 0,
+    "tbt": 0,
+    "state": "{\"reduced\":false,\"motion\":\"active\",\"triggers\":\"6\",\"ambient\":\"playing\",\"heading\":\"Tu portal. A tu manera.\",\"studioPreset\":\"open\",\"studioTransition\":\"0.85s\",\"motionDisabled\":false,\"overflow\":false,\"motionRequested\":true}",
+    "warnings": []
+  }
+]

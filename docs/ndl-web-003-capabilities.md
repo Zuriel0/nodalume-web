@@ -1,0 +1,46 @@
+# NDL-WEB-003 — auditoría de capacidades reales
+
+Fecha: 2026-10-28, America/Mexico_City. Lectura del checkout autorizado de Nodalume, HEAD `0d5e0aa3e4ac03f0fdfda13067de82c700b660c2`. Consulta Graphify como índice, seguida de verificación de fuente. No se modificó la app, cuentas, proyectos, infraestructura ni datos. No se ejecutaron pruebas que contacten DB, RADIUS o integraciones.
+
+El material histórico ANX-013.1 describe un snapshot anterior (`25c6897`). ANX-014 examinó autenticación en `aeb67fa`. Sus límites siguen siendo útiles, pero no describen todo el editor actual. En particular, **la lógica ya no puede describirse únicamente como concepto**: hay contratos, evaluación, simulación y servicio de ejecución. Tener código no acredita operación completa.
+
+## Clasificación
+
+“Implementada en código” describe presencia de controles y comportamiento fuente, no aceptación UI/end-to-end. “Parcial / por validar” se aplica a integración o cobertura operativa, no implica ausencia del editor. No hay declaración de producción, disponibilidad comercial, rendimiento o aislamiento garantizado.
+
+| Capacidad                           | Evidencia primaria revisada                                                                  | Estado                                                    | Qué se puede mostrar después                               | Límite                                                                                                      |
+| ----------------------------------- | -------------------------------------------------------------------------------------------- | --------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Portal Builder                      | `ScreenFlowEditor.jsx`, `EditorLibrary.jsx`                                                  | Implementada en código                                    | Lienzo y selección                                         | No se cambió contenido ni se acreditó persistencia por UI                                                   |
+| Bloques y capas                     | `EditorLibrary.jsx`, referencias a `LayerTree`, `editor-tree`                                | Implementada en código                                    | Biblioteca agrupada y árbol de selección                   | “Componentes” aquí significa bloques tipados; no prometer biblioteca reusable global                        |
+| Inspector                           | `EditorInspector.jsx`, `BLOCK_CONTROLS`, módulos de apariencia                               | Implementada en código                                    | Propiedades del elemento seleccionado                      | Sin cambiar valores; un control no acredita por sí mismo todo su resultado                                  |
+| Responsive                          | Selectores y estado `viewport` en `ScreenFlowEditor.jsx`; inspector por viewport             | Implementada en código                                    | Escritorio, tableta y móvil                                | No garantiza que cualquier portal tenga un diseño correcto; faltan medios revisados                         |
+| Pantallas y navegación              | `ScreenFlowEditor.jsx`, contrato de screens, `effectiveFlowAction` y conexiones por puerto   | Implementada en código                                    | Pantallas y relaciones existentes                          | Mostrar una relación no ejecuta ni demuestra el acceso real                                                 |
+| Conexiones y condiciones            | `flow/flow-connections.js`, `portal-flow-evaluation.js`, contrato y rutas de flujo           | Implementada en código                                    | Grafo real y condición existente en lectura                | La landing muestra solo una explicación conceptual, sin datos del tenant                                    |
+| Simulación                          | `flow/flow-simulation.js`                                                                    | Implementada en código                                    | Posible futura demo separada, identificada como simulación | Fuente usa escenarios sintéticos; no confundir con ejecución real o accesos emitidos                        |
+| Ejecución de flujos                 | `portal-flows/flow-execution.service.js`, `flow.routes.js`                                   | Implementada en código; integración operativa por validar | Explicación del alcance; no ejecutar en esta fase          | Evaluación, operaciones y transiciones presentes; ninguna API externa, DB o red probada aquí                |
+| Borradores/versiones                | `portal-document.service.js`, `portal-document.repository.js`                                | Implementada en código                                    | Estado Guardado y explicación editorial                    | Checks de `expectedVersion`; no se provocaron conflictos ni se guardó                                       |
+| Publicación/historial               | `EditorPublishing.jsx`, servicio/repo de documentos                                          | Implementada en código                                    | Explicación; futura lectura de historial si se autoriza    | Revisión nueva y referencia publicada; restaurar crea historia adicional. No publicar/restaurar para grabar |
+| Autenticación/autorización          | `AuthProvider.jsx`, `admin-authorization.js`, predicados tenant del repositorio              | Implementada en código                                    | Entrada autorizada a tenant demo; no login en medios       | Roles separados de plataforma/tenant; no auditoría de seguridad ni prueba actual de aislamiento             |
+| Operación de red                    | Evidencia histórica ANX-013.1 y código operativo fuera del alcance detallado de esta lectura | Aceptación actual no verificada                           | Caso técnico con límites                                   | Sin RADIUS/NAS, mediciones ni cambios de laboratorio                                                        |
+| Creative Systems / Living Interface | Código del micrositio                                                                        | Conceptual e interactiva en esta web                      | Presets y conexiones locales                               | No es una demo del producto                                                                                 |
+| Cloud, HA, oferta comercial         | Sin despliegue ni aceptación revisada                                                        | Futuro                                                    | Horizonte explícito                                        | Sin fechas, SLA, promesa de lanzamiento o infraestructura inventada                                         |
+
+## Trazabilidad
+
+[Índice de fuentes y hashes](evidence/ndl-web-003/product-source-index.json) conserva solamente rutas, SHA-256 y si el archivo leído difiere de HEAD. Los 12 archivos indexados no tienen modificaciones tracked. El checkout contiene evidencia no versionada de otro trabajo; no se leyó ni usó para atribuir capacidades. No se copia código privado en este repositorio.
+
+El acceso local a la consola abrió el login oficial en `http://127.0.0.1:3000/`. Se ofreció al propietario login manual de demo; nunca se utilizaron credenciales almacenadas, exportó auth state, registraron respuestas de sesión ni capturó el login. El resultado de la comprobación autenticada, si está disponible, se registra en el reporte final, separado de esta auditoría de fuente.
+
+## Cambios de afirmaciones públicas
+
+- Sustituir “motor general conceptual/no establecido” por presencia verificada de editor, evaluación y servicio, con integración por validar.
+- Incluir tableta y capas, respaldadas por el código actual.
+- Explicar borrador/publicación/historial sin ofrecer operaciones desde la landing.
+- Mantener concepto y visión separados de implementación; ningún placeholder acredita funcionamiento.
+- Ninguna captura, marca de terceros ni video privado de ANX-014 se incorpora. No se leyó el video privado.
+
+## Contraste autenticado de interfaz (complemento)
+
+Tras el login manual del propietario se revisó únicamente `Prueba`: título visible, Diseño/Escritorio, alternancia a Móvil y vuelta, panel de propiedades y pestaña Lógica. El grafo cargó con 8 nodos y 7 conexiones, sin mensaje de chunk error; `Guardado` permaneció visible. No se arrastraron nodos, cambiaron campos, ejecutaron condiciones ni guardaron/publicaron operaciones. El servicio de ejecución, las integraciones y la calidad responsive completa no quedan validados por estas acciones.
+
+No había navegación de plataforma visible. No se mostraba el slug `default` como confirmación inequívoca, ni se inspeccionaron respuestas de sesión; por ello **no se afirma verificación de aislamiento, ausencia efectiva de rol de plataforma o pertenencia exclusiva a un tenant**. Esta fase solo requirió lectura. Antes de una grabación futura debe verificarse nuevamente ese alcance. No se hicieron capturas de la app ni se grabó el login o el editor. [Resultados saneados](evidence/ndl-web-003/product-interface.json).

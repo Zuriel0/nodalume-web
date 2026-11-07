@@ -25,3 +25,7 @@ No se usa ningún video, captura de aplicación, contenido de un tenant, retrato
 ## Reserva audiovisual
 
 El frame reserva 16:9 en escritorio y una composición editorial 4:5 en móvil. No contiene un reproductor falso, un botón de play ni resultados inventados. Una futura película debe contar con autorización específica, revisión de marcas y datos, poster propio, controles, transcripción y medición de peso. No se ha reutilizado la prueba privada de grabación anterior.
+
+## NDL-WEB-002
+
+Los archivos públicos de marca/fuentes y sus licencias no cambian. La nueva geometría de `src/components/LivingInterface.jsx` es SVG original del micrositio, expresamente conceptual. No se añade una captura del producto, un poster ni un video. Las evidencias en `docs/evidence/ndl-web-002` son capturas reales del sitio público baseline y de la revisión local; no forman parte de dist. Los hashes del código medido y del build están junto a la comparación de rendimiento.

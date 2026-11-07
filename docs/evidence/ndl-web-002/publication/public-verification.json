@@ -1,0 +1,126 @@
+{
+  "url": "https://nodalume.anxzu.com/",
+  "status": 200,
+  "assets": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 1110,
+      "sha256": "d6f733b2d1692bb06491d4d79660f52b756e6c170318ef909dd331f9881d7d3e"
+    },
+    {
+      "path": "brand/nodalume-mark-original.svg",
+      "status": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 615,
+      "sha256": "ad96c3cbfbd172337aed055b0492e973996ccbe3a6ac25543359eceee33983d6"
+    },
+    {
+      "path": "brand/nodalume-mark.svg",
+      "status": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 353,
+      "sha256": "0bd12d3e54844d43537bc9c11ae32f5c40ffe660a7ee56bd5d36cf384beff5bf"
+    },
+    {
+      "path": "fonts/Syne-OFL.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 4401,
+      "sha256": "781b0eb8f40ad213428b43bfb53fd0ac4711c09f7b4e0b43b62a8efa29f91410"
+    },
+    {
+      "path": "fonts/DM-Sans-OFL.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 4388,
+      "sha256": "7ec15e79c59bc14b86436a17e5eb7926b46cbcaeb08e1a7e6c110b415e6eb2a2"
+    },
+    {
+      "path": "fonts/dm-sans-latin.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 36980,
+      "sha256": "468d56b6b25b05b70190b6c233d773f6f1770e8579827ce022a57f03fa8002fb"
+    },
+    {
+      "path": "fonts/syne-latin.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 34560,
+      "sha256": "cfff412005eed2f0152d1c110c78ac564642b943e64322fbd687083177d6fa70"
+    },
+    {
+      "path": "assets/motion-Cgijrq4O.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 116097,
+      "sha256": "d60fbe9821b9ca81b8dd931e182a0f76e76575308533c88fe9f447fec2dca3ba"
+    },
+    {
+      "path": "assets/index-BktQg1fC.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 13787,
+      "sha256": "177d31519b4b413c78ab6c00a853923e7f0fc1661f201dd8c8d78b6852dd7ee8"
+    },
+    {
+      "path": "assets/index-DXdR44h7.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 238308,
+      "sha256": "ffbcd196e8c197e6e5bf45b29ff789af5fc5d8d709aae2096ea3e1a0fa6b1383"
+    }
+  ],
+  "certificate": {
+    "subject": [
+      [
+        [
+          "commonName",
+          "nodalume.anxzu.com"
+        ]
+      ]
+    ],
+    "issuer": [
+      [
+        [
+          "countryName",
+          "US"
+        ]
+      ],
+      [
+        [
+          "organizationName",
+          "Let's Encrypt"
+        ]
+      ],
+      [
+        [
+          "commonName",
+          "YR2"
+        ]
+      ]
+    ],
+    "version": 3,
+    "serialNumber": "050CC428665CFFF8F17475B705E89A1FEBAF",
+    "notBefore": "Oct 28 02:54:11 2026 GMT",
+    "notAfter": "Jan 26 02:54:10 2027 GMT",
+    "subjectAltName": [
+      [
+        "DNS",
+        "nodalume.anxzu.com"
+      ]
+    ],
+    "caIssuers": [
+      "http://yr2.i.lencr.org/"
+    ],
+    "crlDistributionPoints": [
+      "http://yr2.c.lencr.org/48.crl"
+    ]
+  },
+  "fingerprintSha256": "c0757ed7ac8963be5fef5b774594543db808cac5e99ec12b227506e956f19414",
+  "tls": "TLSv1.2",
+  "publishedCommit": "d4f833004cba3c24aa4a252fa075d6fca250617f",
+  "workflowRun": 40629182568
+}

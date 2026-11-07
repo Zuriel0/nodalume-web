@@ -1,0 +1,182 @@
+[
+  {
+    "brokenHashes": [],
+    "duplicateIds": [],
+    "lang": "es",
+    "outside": [],
+    "overflow": false,
+    "scopeOpen": true,
+    "stages": [
+      "CONECTA",
+      "CONOCE",
+      "ANALIZA",
+      "CRECE"
+    ],
+    "width": 320
+  },
+  {
+    "brokenHashes": [],
+    "duplicateIds": [],
+    "lang": "es",
+    "outside": [],
+    "overflow": false,
+    "scopeOpen": true,
+    "stages": [
+      "CONECTA",
+      "CONOCE",
+      "ANALIZA",
+      "CRECE"
+    ],
+    "width": 375
+  },
+  {
+    "brokenHashes": [],
+    "duplicateIds": [],
+    "lang": "es",
+    "outside": [],
+    "overflow": false,
+    "scopeOpen": true,
+    "stages": [
+      "CONECTA",
+      "CONOCE",
+      "ANALIZA",
+      "CRECE"
+    ],
+    "width": 768
+  },
+  {
+    "brokenHashes": [],
+    "duplicateIds": [],
+    "lang": "es",
+    "outside": [],
+    "overflow": false,
+    "scopeOpen": true,
+    "stages": [
+      "CONECTA",
+      "CONOCE",
+      "ANALIZA",
+      "CRECE"
+    ],
+    "width": 1024
+  },
+  {
+    "brokenHashes": [],
+    "duplicateIds": [],
+    "lang": "es",
+    "outside": [],
+    "overflow": false,
+    "scopeOpen": true,
+    "stages": [
+      "CONECTA",
+      "CONOCE",
+      "ANALIZA",
+      "CRECE"
+    ],
+    "width": 1440
+  },
+  {
+    "brokenHashes": [],
+    "duplicateIds": [],
+    "lang": "es",
+    "outside": [],
+    "overflow": false,
+    "scopeOpen": true,
+    "stages": [
+      "CONECTA",
+      "CONOCE",
+      "ANALIZA",
+      "CRECE"
+    ],
+    "width": 1920
+  },
+  {
+    "brokenHashes": [],
+    "duplicateIds": [],
+    "lang": "en",
+    "outside": [],
+    "overflow": false,
+    "scopeOpen": true,
+    "stages": [
+      "CONNECT",
+      "UNDERSTAND",
+      "ANALYZE",
+      "GROW"
+    ],
+    "width": 320
+  },
+  {
+    "brokenHashes": [],
+    "duplicateIds": [],
+    "lang": "en",
+    "outside": [],
+    "overflow": false,
+    "scopeOpen": true,
+    "stages": [
+      "CONNECT",
+      "UNDERSTAND",
+      "ANALYZE",
+      "GROW"
+    ],
+    "width": 375
+  },
+  {
+    "brokenHashes": [],
+    "duplicateIds": [],
+    "lang": "en",
+    "outside": [],
+    "overflow": false,
+    "scopeOpen": true,
+    "stages": [
+      "CONNECT",
+      "UNDERSTAND",
+      "ANALYZE",
+      "GROW"
+    ],
+    "width": 768
+  },
+  {
+    "brokenHashes": [],
+    "duplicateIds": [],
+    "lang": "en",
+    "outside": [],
+    "overflow": false,
+    "scopeOpen": true,
+    "stages": [
+      "CONNECT",
+      "UNDERSTAND",
+      "ANALYZE",
+      "GROW"
+    ],
+    "width": 1024
+  },
+  {
+    "brokenHashes": [],
+    "duplicateIds": [],
+    "lang": "en",
+    "outside": [],
+    "overflow": false,
+    "scopeOpen": true,
+    "stages": [
+      "CONNECT",
+      "UNDERSTAND",
+      "ANALYZE",
+      "GROW"
+    ],
+    "width": 1440
+  },
+  {
+    "brokenHashes": [],
+    "duplicateIds": [],
+    "lang": "en",
+    "outside": [],
+    "overflow": false,
+    "scopeOpen": true,
+    "stages": [
+      "CONNECT",
+      "UNDERSTAND",
+      "ANALYZE",
+      "GROW"
+    ],
+    "width": 1920
+  }
+]

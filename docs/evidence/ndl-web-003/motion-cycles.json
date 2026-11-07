@@ -1,0 +1,29 @@
+[
+  {
+    "state": "paused",
+    "transition": "0s",
+    "triggers": "0"
+  },
+  {
+    "state": "active",
+    "triggers": "6"
+  },
+  {
+    "state": "paused",
+    "transition": "0s",
+    "triggers": "0"
+  },
+  {
+    "state": "active",
+    "triggers": "6"
+  },
+  {
+    "state": "paused",
+    "transition": "0s",
+    "triggers": "0"
+  },
+  {
+    "state": "active",
+    "triggers": "6"
+  }
+]

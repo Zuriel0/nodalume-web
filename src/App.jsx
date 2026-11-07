@@ -1,5 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { copy, initialLanguage } from "./content.js";
+import LivingInterface from "./components/LivingInterface.jsx";
+import ProductStory from "./components/ProductStory.jsx";
+import { story } from "./product-story.js";
+import { growth } from "./data-growth.js";
+import DataGrowth from "./components/DataGrowth.jsx";
 
 function Arrow({ down = false }) {
   return (
@@ -58,13 +63,15 @@ function Composition() {
               />
             </g>
             <g className="planes">
-              <path
-                className="plane-back"
-                d="M186 146 400 106 534 307 320 347Z"
-                fill="var(--surface)"
-                stroke="var(--ink)"
-                strokeWidth="1.5"
-              />
+              <g className="plane-float-back">
+                <path
+                  className="plane-back"
+                  d="M186 146 400 106 534 307 320 347Z"
+                  fill="var(--surface)"
+                  stroke="var(--ink)"
+                  strokeWidth="1.5"
+                />
+              </g>
               <path
                 className="plane-main"
                 d="m153 245 214-40 134 201-214 40Z"
@@ -79,32 +86,34 @@ function Composition() {
                 strokeDasharray="4 6"
                 opacity=".3"
               />
-              <path
-                className="plane-front"
-                d="m119 342 214-40 134 201-214 40Z"
-                fill="var(--canvas)"
-                stroke="var(--ink)"
-                strokeWidth="1.5"
-              />
-              <path
-                d="m163 373 153-28m-132 59 154-29m-133 59 154-28"
-                stroke="var(--ink)"
-                strokeWidth="1"
-                opacity=".18"
-              />
-              <circle
-                cx="333"
-                cy="302"
-                r="12"
-                fill="var(--signal)"
-                stroke="var(--ink)"
-                strokeWidth="1.5"
-              />
-              <path
-                d="m328 302 3 3 6-7"
-                stroke="var(--ink)"
-                strokeWidth="1.5"
-              />
+              <g className="plane-float-front">
+                <path
+                  className="plane-front"
+                  d="m119 342 214-40 134 201-214 40Z"
+                  fill="var(--canvas)"
+                  stroke="var(--ink)"
+                  strokeWidth="1.5"
+                />
+                <path
+                  d="m163 373 153-28m-132 59 154-29m-133 59 154-28"
+                  stroke="var(--ink)"
+                  strokeWidth="1"
+                  opacity=".18"
+                />
+                <circle
+                  cx="333"
+                  cy="302"
+                  r="12"
+                  fill="var(--signal)"
+                  stroke="var(--ink)"
+                  strokeWidth="1.5"
+                />
+                <path
+                  d="m328 302 3 3 6-7"
+                  stroke="var(--ink)"
+                  strokeWidth="1.5"
+                />
+              </g>
             </g>
             <path
               d="M52 585h24m-12-12v24M556 90h24m-12-12v24"
@@ -118,68 +127,6 @@ function Composition() {
   );
 }
 
-function FilmComposition() {
-  return (
-    <svg
-      viewBox="0 0 1200 675"
-      className="film-art"
-      fill="none"
-      aria-hidden="true"
-    >
-      <circle
-        cx="595"
-        cy="338"
-        r="205"
-        stroke="currentColor"
-        strokeWidth="1"
-        opacity=".23"
-      />
-      <circle
-        cx="595"
-        cy="338"
-        r="282"
-        stroke="currentColor"
-        strokeWidth="1"
-        opacity=".1"
-      />
-      <g className="film-fold">
-        <path d="m380 170 240-45 165 247-240 45Z" fill="var(--electric)" />
-        <path
-          d="m415 275 240-45 165 247-240 45Z"
-          fill="var(--canvas)"
-          stroke="var(--ink)"
-          strokeWidth="1.4"
-        />
-        <path
-          d="m620 125 35 105M785 372l35 105"
-          stroke="var(--ink)"
-          strokeDasharray="5 7"
-          opacity=".45"
-        />
-        <path
-          d="M100 450h220c74 0 28-110 110-110h60m229-20h145c86 0 36-110 120-110h116"
-          stroke="var(--ink)"
-          strokeWidth="1.4"
-        />
-        <circle
-          cx="100"
-          cy="450"
-          r="7"
-          fill="var(--signal)"
-          stroke="var(--ink)"
-        />
-        <circle
-          cx="1100"
-          cy="210"
-          r="7"
-          fill="var(--signal)"
-          stroke="var(--ink)"
-        />
-      </g>
-    </svg>
-  );
-}
-
 export default function App() {
   const root = useRef(null);
   const menuButton = useRef(null);
@@ -190,10 +137,17 @@ export default function App() {
     () => matchMedia("(prefers-reduced-motion: reduce)").matches,
   );
   const t = copy[lang];
-  const targets = ["idea", "product", "horizon"];
+  const targets = [
+    "product",
+    "design-to-logic",
+    "architecture",
+    "data-growth",
+    "horizon",
+  ];
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.documentElement.lang = lang;
+    document.title = copy[lang].title;
     document.querySelector('meta[name="description"]').content =
       copy[lang].meta;
     try {
@@ -202,6 +156,20 @@ export default function App() {
       /* Storage is optional. */
     }
   }, [lang]);
+
+  // The browser can resolve an initial hash before the React target exists.
+  // Run once after commit; subsequent links and history retain native scrolling.
+  useLayoutEffect(() => {
+    try {
+      const id = decodeURIComponent(window.location.hash.slice(1));
+      if (id)
+        document
+          .getElementById(id)
+          ?.scrollIntoView({ behavior: "instant", block: "start" });
+    } catch {
+      /* A malformed or unknown public hash leaves the page usable. */
+    }
+  }, []);
 
   useEffect(() => {
     const query = matchMedia("(prefers-reduced-motion: reduce)");
@@ -300,20 +268,31 @@ export default function App() {
             aria-label={menu ? t.close : t.menu}
             onClick={() => setMenu(!menu)}
           >
-            <span>{menu ? t.close : t.menu}</span>
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
+            <span className="menu-label">{menu ? t.close : t.menu}</span>
+            <span
+              className="t-icon-swap"
+              data-state={menu ? "b" : "a"}
               aria-hidden="true"
             >
-              <path
-                d={menu ? "m5 5 10 10M15 5 5 15" : "M2 6h16M2 14h16"}
-                stroke="currentColor"
-                strokeWidth="1.5"
-              />
-            </svg>
+              <span className="t-icon" data-icon="a">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M2 6h16M2 14h16"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  />
+                </svg>
+              </span>
+              <span className="t-icon" data-icon="b">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="m5 5 10 10M15 5 5 15"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  />
+                </svg>
+              </span>
+            </span>
           </button>
         </div>
         <nav
@@ -340,7 +319,7 @@ export default function App() {
       <main id="main" tabIndex="-1">
         <section className="hero shell" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <h1 id="hero-title">
+            <h1 id="hero-title" aria-label={t.headline.join(" ")}>
               {t.headline.map((line) => (
                 <span className="hero-line" key={line}>
                   {line}
@@ -352,13 +331,13 @@ export default function App() {
               {t.discover}
               <Arrow />
             </a>
+            <a className="hero-secondary t-learn" href="#idea">
+              {t.see}
+              <Arrow />
+            </a>
           </div>
           <figure className="hero-figure">
             <Composition />
-            <figcaption>
-              <span>{t.concept}</span>
-              <span className="figure-note">{t.conceptNote}</span>
-            </figcaption>
           </figure>
           <div className="hero-bottom">
             <a className="scroll-link t-learn" href="#idea">
@@ -371,23 +350,26 @@ export default function App() {
               disabled={reduced}
               onClick={() => setPaused(!paused)}
             >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
+              <span
+                className="t-icon-swap"
+                data-state={paused || reduced ? "b" : "a"}
                 aria-hidden="true"
               >
-                {paused || reduced ? (
-                  <path d="m5 3 7 5-7 5Z" fill="currentColor" />
-                ) : (
-                  <path
-                    d="M5 3v10M11 3v10"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  />
-                )}
-              </svg>
+                <span className="t-icon" data-icon="a">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M5 3v10M11 3v10"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    />
+                  </svg>
+                </span>
+                <span className="t-icon" data-icon="b">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="m5 3 7 5-7 5Z" fill="currentColor" />
+                  </svg>
+                </span>
+              </span>
               {reduced ? t.reduced : paused ? t.resume : t.pause}
             </button>
           </div>
@@ -398,8 +380,18 @@ export default function App() {
           tabIndex="-1"
           aria-labelledby="idea-title"
         >
+          <svg
+            className="scene-seam"
+            viewBox="0 0 1440 72"
+            preserveAspectRatio="none"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path d="M0 0h1440l-184 0-64 64H0Z" fill="var(--canvas)" />
+            <path d="m1256 0-64 64" stroke="var(--electric)" strokeWidth="2" />
+          </svg>
           <div className="shell">
-            <h2 id="idea-title">
+            <h2 id="idea-title" aria-label={t.philosophy.join(" ")}>
               {t.philosophy.map((line) => (
                 <span className="story-line" key={line}>
                   {line}
@@ -425,35 +417,9 @@ export default function App() {
             <p className="principle">{t.principle}</p>
           </div>
         </section>
-        <section
-          className="product shell"
-          id="product"
-          tabIndex="-1"
-          aria-labelledby="product-title"
-        >
-          <div className="section-heading">
-            <h2 id="product-title">{t.productTitle}</h2>
-            <p>{t.productBody}</p>
-          </div>
-          <figure className="film">
-            <div className="film-frame">
-              <FilmComposition />
-              <span className="film-status">
-                <span aria-hidden="true" />
-                {t.filmStatus}
-              </span>
-              <div className="film-copy">
-                <h3>{t.filmTitle}</h3>
-                <p>{t.filmBody}</p>
-              </div>
-            </div>
-            <figcaption>{t.filmCaption}</figcaption>
-          </figure>
-          <a className="text-link t-learn" href="#horizon">
-            {t.scopeCta}
-            <Arrow />
-          </a>
-        </section>
+        <ProductStory text={story[lang]} mediaPaused={paused || reduced} />
+        <DataGrowth text={growth[lang]} />
+        <LivingInterface texts={t.studio} />
         <section
           className="horizon shell"
           id="horizon"
@@ -497,7 +463,22 @@ export default function App() {
       </main>
       <footer className="footer">
         <div className="shell">
-          <h2>{t.footerTitle}</h2>
+          <h2>{story[lang].close}</h2>
+          <p className="footer-intro">{story[lang].closeBody}</p>
+          <a
+            className="button button-primary t-learn contact-close"
+            href="https://anxzu.com/#contact"
+          >
+            {t.contact}
+            <Arrow />
+          </a>
+          <a
+            className="text-link t-learn engineering-close"
+            href="https://anxzu.com/projects/nodalume/"
+          >
+            {t.engineering}
+            <Arrow />
+          </a>
           <a className="text-link t-learn" href="#top">
             {t.top}
             <Arrow />

@@ -1,0 +1,13 @@
+{
+  "composition": "linked",
+  "connections": "false",
+  "hash": "#studio",
+  "heading": "Tu portal. A tu manera.",
+  "motion": {
+    "motion": "static-fallback",
+    "triggers": "0"
+  },
+  "studioHeight": 981.46875,
+  "studioY": 1526.625,
+  "transition": "0s"
+}

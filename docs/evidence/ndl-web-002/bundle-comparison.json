@@ -1,0 +1,86 @@
+{
+  "baseline": {
+    "manifest": {
+      "index.html": {
+        "file": "assets/index-DXdR44h7.js",
+        "name": "index",
+        "src": "index.html",
+        "isEntry": true,
+        "dynamicImports": [
+          "src/motion.js"
+        ],
+        "css": [
+          "assets/index-BktQg1fC.css"
+        ]
+      },
+      "src/motion.js": {
+        "file": "assets/motion-Cgijrq4O.js",
+        "name": "motion",
+        "src": "src/motion.js",
+        "isDynamicEntry": true
+      }
+    },
+    "assets": [
+      {
+        "file": "index-BktQg1fC.css",
+        "bytes": 13787,
+        "gzipBytes": 3729,
+        "sha256": "177d31519b4b413c78ab6c00a853923e7f0fc1661f201dd8c8d78b6852dd7ee8"
+      },
+      {
+        "file": "index-DXdR44h7.js",
+        "bytes": 238308,
+        "gzipBytes": 73958,
+        "sha256": "ffbcd196e8c197e6e5bf45b29ff789af5fc5d8d709aae2096ea3e1a0fa6b1383"
+      },
+      {
+        "file": "motion-Cgijrq4O.js",
+        "bytes": 116097,
+        "gzipBytes": 45065,
+        "sha256": "d60fbe9821b9ca81b8dd931e182a0f76e76575308533c88fe9f447fec2dca3ba"
+      }
+    ]
+  },
+  "candidate": {
+    "manifest": {
+      "index.html": {
+        "file": "assets/index-Cv4FMV8N.js",
+        "name": "index",
+        "src": "index.html",
+        "isEntry": true,
+        "dynamicImports": [
+          "src/motion.js"
+        ],
+        "css": [
+          "assets/index-BDSascB0.css"
+        ]
+      },
+      "src/motion.js": {
+        "file": "assets/motion-BuOsApQO.js",
+        "name": "motion",
+        "src": "src/motion.js",
+        "isDynamicEntry": true
+      }
+    },
+    "assets": [
+      {
+        "file": "index-BDSascB0.css",
+        "bytes": 19925,
+        "gzipBytes": 4924,
+        "sha256": "3579e8a1b60f0109a2c6bbdaf511c7a5f308f58316deae41045649efc0464273"
+      },
+      {
+        "file": "index-Cv4FMV8N.js",
+        "bytes": 244784,
+        "gzipBytes": 75428,
+        "sha256": "18d2a376c92ecdde184ef49045b270051b6240a6bccfe702fb4047c1f9d26622"
+      },
+      {
+        "file": "motion-BuOsApQO.js",
+        "bytes": 117261,
+        "gzipBytes": 45394,
+        "sha256": "a2d53827f176cdddf8f608aad4158687a32b38b2edab5d303aae9ce23a30db2b"
+      }
+    ]
+  }
+}

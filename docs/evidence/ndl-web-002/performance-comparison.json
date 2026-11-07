@@ -1,0 +1,326 @@
+[
+  {
+    "version": "baseline",
+    "profile": "mobile",
+    "runs": [
+      {
+        "run": 1,
+        "formFactor": "mobile",
+        "lighthouse": "13.6.0",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "performance": 100,
+        "accessibility": 100,
+        "lcpMs": 1208.9565,
+        "cls": 0,
+        "tbtMs": 0,
+        "warnings": [],
+        "state": {
+          "reduced": false,
+          "motion": "active",
+          "triggers": "4",
+          "ambient": "playing",
+          "heading": "Tu portal.A tu manera.",
+          "studioPreset": null,
+          "studioTransition": null,
+          "motionDisabled": false,
+          "overflow": false,
+          "motionRequested": true
+        }
+      },
+      {
+        "run": 2,
+        "formFactor": "mobile",
+        "lighthouse": "13.6.0",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "performance": 100,
+        "accessibility": 100,
+        "lcpMs": 752.6212,
+        "cls": 0,
+        "tbtMs": 0,
+        "warnings": [],
+        "state": {
+          "reduced": false,
+          "motion": "active",
+          "triggers": "4",
+          "ambient": "playing",
+          "heading": "Tu portal.A tu manera.",
+          "studioPreset": null,
+          "studioTransition": null,
+          "motionDisabled": false,
+          "overflow": false,
+          "motionRequested": true
+        }
+      },
+      {
+        "run": 3,
+        "formFactor": "mobile",
+        "lighthouse": "13.6.0",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "performance": 100,
+        "accessibility": 100,
+        "lcpMs": 752.2283,
+        "cls": 0,
+        "tbtMs": 0,
+        "warnings": [],
+        "state": {
+          "reduced": false,
+          "motion": "active",
+          "triggers": "4",
+          "ambient": "playing",
+          "heading": "Tu portal.A tu manera.",
+          "studioPreset": null,
+          "studioTransition": null,
+          "motionDisabled": false,
+          "overflow": false,
+          "motionRequested": true
+        }
+      }
+    ],
+    "lcpMedianMs": 752.6212,
+    "lcpMinMs": 752.2283,
+    "lcpMaxMs": 1208.9565
+  },
+  {
+    "version": "baseline",
+    "profile": "desktop",
+    "runs": [
+      {
+        "run": 1,
+        "formFactor": "desktop",
+        "lighthouse": "13.6.0",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "performance": 100,
+        "accessibility": 100,
+        "lcpMs": 202.27179999999998,
+        "cls": 0,
+        "tbtMs": 0,
+        "warnings": [],
+        "state": {
+          "reduced": false,
+          "motion": "active",
+          "triggers": "4",
+          "ambient": "playing",
+          "heading": "Tu portal.A tu manera.",
+          "studioPreset": null,
+          "studioTransition": null,
+          "motionDisabled": false,
+          "overflow": false,
+          "motionRequested": true
+        }
+      },
+      {
+        "run": 2,
+        "formFactor": "desktop",
+        "lighthouse": "13.6.0",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "performance": 100,
+        "accessibility": 100,
+        "lcpMs": 323.5096,
+        "cls": 0,
+        "tbtMs": 0,
+        "warnings": [],
+        "state": {
+          "reduced": false,
+          "motion": "active",
+          "triggers": "4",
+          "ambient": "playing",
+          "heading": "Tu portal.A tu manera.",
+          "studioPreset": null,
+          "studioTransition": null,
+          "motionDisabled": false,
+          "overflow": false,
+          "motionRequested": true
+        }
+      },
+      {
+        "run": 3,
+        "formFactor": "desktop",
+        "lighthouse": "13.6.0",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "performance": 100,
+        "accessibility": 100,
+        "lcpMs": 202.4663,
+        "cls": 0,
+        "tbtMs": 0,
+        "warnings": [],
+        "state": {
+          "reduced": false,
+          "motion": "active",
+          "triggers": "4",
+          "ambient": "playing",
+          "heading": "Tu portal.A tu manera.",
+          "studioPreset": null,
+          "studioTransition": null,
+          "motionDisabled": false,
+          "overflow": false,
+          "motionRequested": true
+        }
+      }
+    ],
+    "lcpMedianMs": 202.4663,
+    "lcpMinMs": 202.27179999999998,
+    "lcpMaxMs": 323.5096
+  },
+  {
+    "version": "candidate",
+    "profile": "mobile",
+    "runs": [
+      {
+        "run": 1,
+        "formFactor": "mobile",
+        "lighthouse": "13.6.0",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "performance": 100,
+        "accessibility": 100,
+        "lcpMs": 753.1842999999999,
+        "cls": 0,
+        "tbtMs": 0,
+        "warnings": [],
+        "state": {
+          "reduced": false,
+          "motion": "active",
+          "triggers": "6",
+          "ambient": "playing",
+          "heading": "Tu portal. A tu manera.",
+          "studioPreset": "open",
+          "studioTransition": "0.85s",
+          "motionDisabled": false,
+          "overflow": false,
+          "motionRequested": true
+        }
+      },
+      {
+        "run": 2,
+        "formFactor": "mobile",
+        "lighthouse": "13.6.0",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "performance": 100,
+        "accessibility": 100,
+        "lcpMs": 752.8774000000001,
+        "cls": 0,
+        "tbtMs": 0,
+        "warnings": [],
+        "state": {
+          "reduced": false,
+          "motion": "active",
+          "triggers": "6",
+          "ambient": "playing",
+          "heading": "Tu portal. A tu manera.",
+          "studioPreset": "open",
+          "studioTransition": "0.85s",
+          "motionDisabled": false,
+          "overflow": false,
+          "motionRequested": true
+        }
+      },
+      {
+        "run": 3,
+        "formFactor": "mobile",
+        "lighthouse": "13.6.0",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "performance": 100,
+        "accessibility": 100,
+        "lcpMs": 752.1266,
+        "cls": 0,
+        "tbtMs": 0,
+        "warnings": [],
+        "state": {
+          "reduced": false,
+          "motion": "active",
+          "triggers": "6",
+          "ambient": "playing",
+          "heading": "Tu portal. A tu manera.",
+          "studioPreset": "open",
+          "studioTransition": "0.85s",
+          "motionDisabled": false,
+          "overflow": false,
+          "motionRequested": true
+        }
+      }
+    ],
+    "lcpMedianMs": 752.8774000000001,
+    "lcpMinMs": 752.1266,
+    "lcpMaxMs": 753.1842999999999
+  },
+  {
+    "version": "candidate",
+    "profile": "desktop",
+    "runs": [
+      {
+        "run": 1,
+        "formFactor": "desktop",
+        "lighthouse": "13.6.0",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "performance": 100,
+        "accessibility": 100,
+        "lcpMs": 203.8523,
+        "cls": 0,
+        "tbtMs": 0,
+        "warnings": [],
+        "state": {
+          "reduced": false,
+          "motion": "active",
+          "triggers": "6",
+          "ambient": "playing",
+          "heading": "Tu portal. A tu manera.",
+          "studioPreset": "open",
+          "studioTransition": "0.85s",
+          "motionDisabled": false,
+          "overflow": false,
+          "motionRequested": true
+        }
+      },
+      {
+        "run": 2,
+        "formFactor": "desktop",
+        "lighthouse": "13.6.0",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "performance": 100,
+        "accessibility": 100,
+        "lcpMs": 323.4874,
+        "cls": 0,
+        "tbtMs": 0,
+        "warnings": [],
+        "state": {
+          "reduced": false,
+          "motion": "active",
+          "triggers": "6",
+          "ambient": "playing",
+          "heading": "Tu portal. A tu manera.",
+          "studioPreset": "open",
+          "studioTransition": "0.85s",
+          "motionDisabled": false,
+          "overflow": false,
+          "motionRequested": true
+        }
+      },
+      {
+        "run": 3,
+        "formFactor": "desktop",
+        "lighthouse": "13.6.0",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "performance": 100,
+        "accessibility": 100,
+        "lcpMs": 202.38099999999997,
+        "cls": 0,
+        "tbtMs": 0,
+        "warnings": [],
+        "state": {
+          "reduced": false,
+          "motion": "active",
+          "triggers": "6",
+          "ambient": "playing",
+          "heading": "Tu portal. A tu manera.",
+          "studioPreset": "open",
+          "studioTransition": "0.85s",
+          "motionDisabled": false,
+          "overflow": false,
+          "motionRequested": true
+        }
+      }
+    ],
+    "lcpMedianMs": 203.8523,
+    "lcpMinMs": 202.38099999999997,
+    "lcpMaxMs": 323.4874
+  }
+]

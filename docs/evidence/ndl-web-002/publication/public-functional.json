@@ -1,0 +1,30 @@
+{
+  "paused": {
+    "ambient": "paused",
+    "motion": "paused",
+    "triggers": "0"
+  },
+  "language": {
+    "hash": "",
+    "lang": "en",
+    "motion": {
+      "ambient": "paused",
+      "motion": "paused",
+      "triggers": "0"
+    }
+  },
+  "persist": {
+    "lang": "en",
+    "motion": {
+      "ambient": "playing",
+      "motion": "active",
+      "triggers": "4"
+    }
+  },
+  "navigation": {
+    "focus": "product",
+    "hash": "#product",
+    "menu": "false"
+  },
+  "console": []
+}

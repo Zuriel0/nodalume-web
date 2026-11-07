@@ -1,0 +1,11 @@
+{
+  "src/App.jsx": "95b9f31d9f5d9817d1b5fedffd9b564dca32cd189afba5a1f25d5c3b06631fd4",
+  "src/content.js": "ce2145255969ee8ada7ed225c46038fa0edebc36987365a95999fa8e799d37b3",
+  "src/product-story.js": "75f2beeb119f102fcdc9c5f6190f13121776d5cc4203dce7aa6c062f2d8cd140",
+  "src/components/ProductStory.jsx": "2dfe8880bf077b99a2db9f0e163bd037de16e6c88649506900e467f0f15b5816",
+  "src/components/LivingInterface.jsx": "9306544bf60e8d08eeb0c553ee6f47d2bd44aaa79fb4728c19b7998b86114c7b",
+  "src/motion.js": "e6e42c92995cf502bd22393976ab088cba0209e1e1ab1eace8b54ac809893aa4",
+  "src/styles.css": "369142bda4545db40c5c0b1b53884f3e16efd9941a3c20733ed1e2e208f9e78d",
+  "package.json": "07fb2626570dac3a6edd2ac740068677cbd7dee6c1967f32a7364987dfc5eea5",
+  "package-lock.json": "c919f9925a1e3edd2643021ef137b9649c67995a3cc3c9d2ddbf5d7ba05016fc"
+}

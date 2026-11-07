@@ -1,0 +1,81 @@
+{
+  "commit": "3253cfb5d62e015f7444c43358b5c7eca7b50322",
+  "mode": "read-only source review; no runtime data queried or tests executed",
+  "files": [
+    {
+      "path": "portal-api/src/modules/registrations/registration.service.js",
+      "sha256": "55d235f5d2fdf73b6fef2b7db64416004c09543b3bd42b700c9ab7d3e2cc5e3a",
+      "differsFromHEAD": false
+    },
+    {
+      "path": "portal-api/src/modules/registrations/registration-answers.js",
+      "sha256": "e262e1da14887747113d2f5df16766f9697f3db1e14ecadc65802a65a57221a2",
+      "differsFromHEAD": false
+    },
+    {
+      "path": "portal-api/src/modules/portal-events/portal-event.service.js",
+      "sha256": "e5e71a047a5ec842b815515e6e5ba6b3a7d8da7dc1bbe96099c1227d77de7f4a",
+      "differsFromHEAD": false
+    },
+    {
+      "path": "portal-api/src/modules/portal-events/portal-event.schema.js",
+      "sha256": "9a252b13082c95d8d53b06e967657a17d62cfd3dcec7937fd9e01535804e9297",
+      "differsFromHEAD": false
+    },
+    {
+      "path": "portal-api/src/modules/portal-events/portal-event.repository.js",
+      "sha256": "abe75c114ce9e418780aad46aa3f8c9a8aa57496913514706bca553f89ba15ea",
+      "differsFromHEAD": false
+    },
+    {
+      "path": "portal-api/src/modules/tenant-reports/tenant-report.service.js",
+      "sha256": "49d55786808b51c4471e670b65e3af410385b04c9bbb8905e79b7151457bfbda",
+      "differsFromHEAD": false
+    },
+    {
+      "path": "portal-api/src/modules/tenant-reports/tenant-report.routes.js",
+      "sha256": "8883d24e23bdb3dc60d3f202c61ae5434ae72ed58aae01ffb1de0d65762e706e",
+      "differsFromHEAD": false
+    },
+    {
+      "path": "portal-api/src/modules/tenant-reports/tenant-report.repository.js",
+      "sha256": "1f66f5a8092e929387c750de023ffa331bf713a92f3e67231da3d25f006e7517",
+      "differsFromHEAD": false
+    },
+    {
+      "path": "portal-api/src/modules/statistics/statistics.repository.js",
+      "sha256": "4185310d24c5ddc60b856772c1654194359bba504e8cc1e4f760b541f3ad8d0c",
+      "differsFromHEAD": false
+    },
+    {
+      "path": "portal-api/src/modules/statistics/technology.js",
+      "sha256": "5276147ba8b043baeeb1d640cdcff7112da870c318f3a3e2f891de8a19a719bc",
+      "differsFromHEAD": false
+    },
+    {
+      "path": "portal-api/src/modules/campaigns/campaign-analytics.service.js",
+      "sha256": "309f8adaae4472fe146a9c37c173c1e33fb73be2030e5cee45eb08feb096fc84",
+      "differsFromHEAD": false
+    },
+    {
+      "path": "portal-api/src/modules/campaigns/campaign-analytics.routes.js",
+      "sha256": "a5e0d0b6086fc7a6b83c0c47500d6fb3e027fbe3d9b7abf2c2bf24dc6235589d",
+      "differsFromHEAD": false
+    },
+    {
+      "path": "portal-api/src/db/accounting-attribution.js",
+      "sha256": "6758d4de331cc5169c18f43793d62201ae67f1db90208b45478a8b442093173a",
+      "differsFromHEAD": false
+    },
+    {
+      "path": "admin-console/src/views/tenant/StatisticsPage.jsx",
+      "sha256": "4f2bb41f0571a089f91415355d975153c72caa220d0eb22b0184ae09717de1f7",
+      "differsFromHEAD": false
+    },
+    {
+      "path": "portal-api/tests/unit/statistics.test.js",
+      "sha256": "2921ad929a5168f6e4dc441fe9d5bea9a35744a559373310e61625735a6c158c",
+      "differsFromHEAD": false
+    }
+  ]
+}

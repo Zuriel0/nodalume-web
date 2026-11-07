@@ -24,3 +24,11 @@ Los hashes corresponden a elementos reales. El menú móvil conserva enlaces nat
 4. Evolución y despliegue: separar laboratorio, implementación parcial y aspiraciones cloud.
 
 No se crean páginas vacías, enlaces a una consola, botones de prueba comercial ni rutas ficticias. Las secciones futuras no tienen coreografías complejas implementadas en esta fase.
+
+## NDL-WEB-002 — local review branch
+
+The sequence now includes `#studio` between philosophy and product. The primary CTA leads to this real local experiment. Its presets, connection visibility and reset affect only conceptual geometry; the disclaimer explicitly separates it from the Portal Builder. Existing hashes remain valid. The product context links to https://anxzu.com/projects/nodalume/ as verifiable engineering evidence. The video frame remains pending, without private footage or a simulated player.
+
+## NDL-WEB-003 — arquitectura de producto local
+
+El recorrido vigente de la rama sucesora se define en [storyboard](ndl-web-003-storyboard.md). Se agregan `#design-to-logic`, `#architecture` y cuatro destinos `#demo-*`. El CTA principal pasa a `#product`; `#studio` se conserva después del control editorial como exploración conceptual. Los hashes previos continúan resolviendo. La afirmación sobre lógica se actualiza según el código actual: editor, evaluación y servicio presentes, integración operativa por validar.
